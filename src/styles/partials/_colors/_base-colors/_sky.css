@@ -1,0 +1,92 @@
+:root {
+  --sky-a1: #00d5ff06;
+  --sky-a2: #00a4db0e;
+  --sky-a3: #00b3ee1e;
+  --sky-a4: #00ace42e;
+  --sky-a5: #00a1d841;
+  --sky-a6: #0092ca56;
+  --sky-a7: #0089c172;
+  --sky-a8: #0085bf9f;
+  --sky-a9: #00c7fe83;
+  --sky-a10: #00bcf38b;
+  --sky-a11: #00749e;
+  --sky-a12: #002540e2;
+  --sky-1: #f9feff;
+  --sky-2: #f1fafd;
+  --sky-3: #e1f6fd;
+  --sky-4: #d1f0fa;
+  --sky-5: #bee7f5;
+  --sky-6: #a9daed;
+  --sky-7: #8dcae3;
+  --sky-8: #60b3d7;
+  --sky-9: #7ce2fe;
+  --sky-10: #74daf8;
+  --sky-11: #00749e;
+  --sky-12: #1d3e56;
+  --sky-contrast: #1c2024;
+  --sky-surface: #eef9fdcc;
+  --sky-indicator: var(--sky-9);
+  --sky-track: var(--sky-9);
+}
+
+.dark {
+  --sky-a1: #0044ff0f;
+  --sky-a2: #1171fb18;
+  --sky-a3: #1184fc33;
+  --sky-a4: #128fff49;
+  --sky-a5: #1c9dfd5d;
+  --sky-a6: #28a5ff72;
+  --sky-a7: #2badfe8b;
+  --sky-a8: #1db2fea9;
+  --sky-a9: #7ce3ff;
+  --sky-a10: #a8eeff;
+  --sky-a11: #7cd3ffef;
+  --sky-a12: #c2f3ff;
+  --sky-1: #0d141f;
+  --sky-2: #111a27;
+  --sky-3: #112840;
+  --sky-4: #113555;
+  --sky-5: #154467;
+  --sky-6: #1b537b;
+  --sky-7: #1f6692;
+  --sky-8: #197cae;
+  --sky-9: #7ce2fe;
+  --sky-10: #a8eeff;
+  --sky-11: #75c7f0;
+  --sky-12: #c2f3ff;
+  --sky-contrast: #1c2024;
+  --sky-surface: #13233b80;
+  --sky-indicator: var(--sky-9);
+  --sky-track: color-mix(in oklab, var(--sky-8), var(--sky-9) 65%);
+}
+
+@theme inline {
+  --color-sky-a1: var(--sky-a1);
+  --color-sky-a2: var(--sky-a2);
+  --color-sky-a3: var(--sky-a3);
+  --color-sky-a4: var(--sky-a4);
+  --color-sky-a5: var(--sky-a5);
+  --color-sky-a6: var(--sky-a6);
+  --color-sky-a7: var(--sky-a7);
+  --color-sky-a8: var(--sky-a8);
+  --color-sky-a9: var(--sky-a9);
+  --color-sky-a10: var(--sky-a10);
+  --color-sky-a11: var(--sky-a11);
+  --color-sky-a12: var(--sky-a12);
+  --color-sky-1: var(--sky-1);
+  --color-sky-2: var(--sky-2);
+  --color-sky-3: var(--sky-3);
+  --color-sky-4: var(--sky-4);
+  --color-sky-5: var(--sky-5);
+  --color-sky-6: var(--sky-6);
+  --color-sky-7: var(--sky-7);
+  --color-sky-8: var(--sky-8);
+  --color-sky-9: var(--sky-9);
+  --color-sky-10: var(--sky-10);
+  --color-sky-11: var(--sky-11);
+  --color-sky-12: var(--sky-12);
+  --color-sky-contrast: var(--sky-contrast);
+  --color-sky-surface: var(--sky-surface);
+  --color-sky-indicator: var(--sky-indicator);
+  --color-sky-track: var(--sky-track);
+}

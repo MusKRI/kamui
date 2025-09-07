@@ -1,0 +1,56 @@
+:root {
+  --brand-1: #fcfdf9;
+  --brand-2: #f7fbf1;
+  --brand-3: #e8facd;
+  --brand-4: #daf5af;
+  --brand-5: #cced94;
+  --brand-6: #bcdf7d;
+  --brand-7: #a8cd63;
+  --brand-8: #8eb92a;
+  --brand-9: #b8f400;
+  --brand-10: #a4d804;
+  --brand-11: #94c302;
+  --brand-12: #334215;
+  --brand-contrast: #1d250f;
+  --brand-surface: #f5faeecc;
+  --brand-indicator: #b8f400;
+  --brand-track: #b8f400;
+}
+
+.dark {
+  --brand-1: #000;
+  --brand-2: #0f1307;
+  --brand-3: #1d250d;
+  --brand-4: #28340f;
+  --brand-5: #334311;
+  --brand-6: #3e5115;
+  --brand-7: #4b621a;
+  --brand-8: #5a761c;
+  --brand-9: #bcf800;
+  --brand-10: #cfff3a;
+  --brand-11: #dfff7a;
+  --brand-12: #e8ffa2;
+  --brand-contrast: #1d250f;
+  --brand-surface: #1e260e80;
+  --brand-indicator: #bcf800;
+  --brand-track: #bcf800;
+}
+
+@theme inline {
+  --color-brand-1: var(--brand-1);
+  --color-brand-2: var(--brand-2);
+  --color-brand-3: var(--brand-3);
+  --color-brand-4: var(--brand-4);
+  --color-brand-5: var(--brand-5);
+  --color-brand-6: var(--brand-6);
+  --color-brand-7: var(--brand-7);
+  --color-brand-8: var(--brand-8);
+  --color-brand-9: var(--brand-9);
+  --color-brand-10: var(--brand-10);
+  --color-brand-11: var(--brand-11);
+  --color-brand-12: var(--brand-12);
+  --color-brand-contrast: var(--brand-contrast);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-indicator: var(--brand-indicator);
+  --color-brand-track: var(--brand-track);
+}

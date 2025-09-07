@@ -1,0 +1,92 @@
+:root {
+  --amber-a1: #c0800004;
+  --amber-a2: #f4d10016;
+  --amber-a3: #ffde003d;
+  --amber-a4: #ffd40063;
+  --amber-a5: #f8cf0088;
+  --amber-a6: #eab5008c;
+  --amber-a7: #dc9b009d;
+  --amber-a8: #da8a00c9;
+  --amber-a9: #ffb300c2;
+  --amber-a10: #ffb300e7;
+  --amber-a11: #ab6400;
+  --amber-a12: #341500dd;
+  --amber-1: #fefdfb;
+  --amber-2: #fefbe9;
+  --amber-3: #fff7c2;
+  --amber-4: #ffee9c;
+  --amber-5: #fbe577;
+  --amber-6: #f3d673;
+  --amber-7: #e9c162;
+  --amber-8: #e2a336;
+  --amber-9: #ffc53d;
+  --amber-10: #ffba18;
+  --amber-11: #ab6400;
+  --amber-12: #4f3422;
+  --amber-contrast: #21201c;
+  --amber-surface: #fefae4cc;
+  --amber-indicator: var(--amber-9);
+  --amber-track: var(--amber-9);
+}
+
+.dark {
+  --amber-a1: #e63c0006;
+  --amber-a2: #fd9b000d;
+  --amber-a3: #fa820022;
+  --amber-a4: #fc820032;
+  --amber-a5: #fd8b0041;
+  --amber-a6: #fd9b0051;
+  --amber-a7: #ffab2567;
+  --amber-a8: #ffae3587;
+  --amber-a9: #ffc53d;
+  --amber-a10: #ffd60a;
+  --amber-a11: #ffca16;
+  --amber-a12: #ffe7b3;
+  --amber-1: #16120c;
+  --amber-2: #1d180f;
+  --amber-3: #302008;
+  --amber-4: #3f2700;
+  --amber-5: #4d3000;
+  --amber-6: #5c3d05;
+  --amber-7: #714f19;
+  --amber-8: #8f6424;
+  --amber-9: #ffc53d;
+  --amber-10: #ffd60a;
+  --amber-11: #ffca16;
+  --amber-12: #ffe7b3;
+  --amber-contrast: #21201c;
+  --amber-surface: #271f1380;
+  --amber-indicator: var(--amber-9);
+  --amber-track: color-mix(in oklab, var(--amber-8), var(--amber-9) 75%);
+}
+
+@theme inline {
+  --color-amber-a1: var(--amber-a1);
+  --color-amber-a2: var(--amber-a2);
+  --color-amber-a3: var(--amber-a3);
+  --color-amber-a4: var(--amber-a4);
+  --color-amber-a5: var(--amber-a5);
+  --color-amber-a6: var(--amber-a6);
+  --color-amber-a7: var(--amber-a7);
+  --color-amber-a8: var(--amber-a8);
+  --color-amber-a9: var(--amber-a9);
+  --color-amber-a10: var(--amber-a10);
+  --color-amber-a11: var(--amber-a11);
+  --color-amber-a12: var(--amber-a12);
+  --color-amber-1: var(--amber-1);
+  --color-amber-2: var(--amber-2);
+  --color-amber-3: var(--amber-3);
+  --color-amber-4: var(--amber-4);
+  --color-amber-5: var(--amber-5);
+  --color-amber-6: var(--amber-6);
+  --color-amber-7: var(--amber-7);
+  --color-amber-8: var(--amber-8);
+  --color-amber-9: var(--amber-9);
+  --color-amber-10: var(--amber-10);
+  --color-amber-11: var(--amber-11);
+  --color-amber-12: var(--amber-12);
+  --color-amber-contrast: var(--amber-contrast);
+  --color-amber-surface: var(--amber-surface);
+  --color-amber-indicator: var(--amber-indicator);
+  --color-amber-track: var(--amber-track);
+}

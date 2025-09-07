@@ -1,0 +1,44 @@
+:root {
+  --black-a1: #0000000d;
+  --black-a2: #0000001a;
+  --black-a3: #00000026;
+  --black-a4: #0003;
+  --black-a5: #0000004d;
+  --black-a6: #0006;
+  --black-a7: #00000080;
+  --black-a8: #0009;
+  --black-a9: #000000b3;
+  --black-a10: #000c;
+  --black-a11: #000000e6;
+  --black-a12: #000000f2;
+}
+
+.dark {
+  --black-a1: #0000000d;
+  --black-a2: #0000001a;
+  --black-a3: #00000026;
+  --black-a4: #0003;
+  --black-a5: #0000004d;
+  --black-a6: #0006;
+  --black-a7: #00000080;
+  --black-a8: #0009;
+  --black-a9: #000000b3;
+  --black-a10: #000c;
+  --black-a11: #000000e6;
+  --black-a12: #000000f2;
+}
+
+@theme inline {
+  --color-black-a1: var(--black-a1);
+  --color-black-a2: var(--black-a2);
+  --color-black-a3: var(--black-a3);
+  --color-black-a4: var(--black-a4);
+  --color-black-a5: var(--black-a5);
+  --color-black-a6: var(--black-a6);
+  --color-black-a7: var(--black-a7);
+  --color-black-a8: var(--black-a8);
+  --color-black-a9: var(--black-a9);
+  --color-black-a10: var(--black-a10);
+  --color-black-a11: var(--black-a11);
+  --color-black-a12: var(--black-a12);
+}

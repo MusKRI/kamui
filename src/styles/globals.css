@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Partials */
+@import "./partials/index.css";
+
+:root {
+  --scrollbar-width-fallback: 17px;
+}
+
+@theme inline {
+  /* FONTS */
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-noto-mono);
+  --font-funnel-display: var(--font-funnel-display);
+  --font-calistoga: var(--font-calistoga);
+  --font-merriweather: var(--font-merriweather);
+
+  /* COLORS */
+  --color-edge-primary: var(--color-surface-5);
+  --color-gutter-bg: var(--color-surface-a1);
+}
+
+* {
+  min-width: 0;
+}
+
+/* Performance: Critical styles loaded first */
+html {
+  touch-action: manipulation;
+  height: 100dvh;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  height: 100%;
+}
