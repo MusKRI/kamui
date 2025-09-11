@@ -30,12 +30,19 @@
 /* Performance: Critical styles loaded first */
 html {
   touch-action: manipulation;
-  height: 100dvh;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   font-family: ui-sans-serif, system-ui, sans-serif;
+  height: 100%;
 }
 
 body {
   height: 100%;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--selection-background-color);
+  color: var(--selection-color);
+  text-shadow: none;
 }

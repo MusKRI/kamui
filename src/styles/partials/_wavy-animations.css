@@ -1,0 +1,266 @@
+/* Wavy Shape Pattern Animations */
+.wavy-pattern-animated {
+  animation: gentleRotate 120s linear infinite;
+}
+
+.wavy-pattern-animated g {
+  animation: breathe 8s ease-in-out infinite alternate;
+}
+
+.wavy-pattern-animated path:nth-child(1) {
+  animation: dashFlow1 15s linear infinite,
+    fadeInOut 6s ease-in-out infinite alternate;
+}
+
+.wavy-pattern-animated path:nth-child(2) {
+  animation: dashFlow2 18s linear infinite,
+    fadeInOut 7s ease-in-out infinite alternate;
+}
+
+.wavy-pattern-animated path:nth-child(3) {
+  animation: dashFlow3 12s linear infinite,
+    fadeInOut 5s ease-in-out infinite alternate;
+}
+
+.wavy-pattern-animated path:nth-child(4) {
+  animation: dashFlow4 20s linear infinite,
+    fadeInOut 8s ease-in-out infinite alternate;
+}
+
+.wavy-pattern-animated path:nth-child(5) {
+  animation: dashFlow5 14s linear infinite,
+    fadeInOut 6s ease-in-out infinite alternate;
+}
+
+.wavy-pattern-animated path:nth-child(6) {
+  animation: dashFlow6 16s linear infinite,
+    fadeInOut 9s ease-in-out infinite alternate;
+}
+
+.wavy-pattern-animated path:nth-child(7) {
+  animation: dashFlow7 22s linear infinite,
+    fadeInOut 7s ease-in-out infinite alternate;
+}
+
+.wavy-pattern-animated path:nth-child(8) {
+  animation: dashFlow8 11s linear infinite,
+    fadeInOut 5s ease-in-out infinite alternate;
+}
+
+.wavy-pattern-animated path:nth-child(9) {
+  animation: dashFlow9 19s linear infinite,
+    fadeInOut 8s ease-in-out infinite alternate;
+}
+
+.wavy-pattern-animated path:nth-child(10) {
+  animation: dashFlow10 13s linear infinite,
+    fadeInOut 6s ease-in-out infinite alternate;
+}
+
+.wavy-pattern-animated path:nth-child(11) {
+  animation: dashFlow11 17s linear infinite,
+    fadeInOut 9s ease-in-out infinite alternate;
+}
+
+.wavy-pattern-animated path:nth-child(12) {
+  animation: dashFlow12 21s linear infinite,
+    fadeInOut 7s ease-in-out infinite alternate;
+}
+
+.wavy-pattern-animated path:nth-child(13) {
+  animation: dashFlow13 10s linear infinite,
+    fadeInOut 5s ease-in-out infinite alternate;
+}
+
+.wavy-pattern-animated path:nth-child(14) {
+  animation: dashFlow14 24s linear infinite,
+    fadeInOut 8s ease-in-out infinite alternate;
+}
+
+.wavy-pattern-animated path:nth-child(15) {
+  animation: dashFlow15 16s linear infinite,
+    fadeInOut 6s ease-in-out infinite alternate;
+}
+
+@keyframes gentleRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes breathe {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes dashFlow1 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 52;
+  }
+}
+
+@keyframes dashFlow2 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -44;
+  }
+}
+
+@keyframes dashFlow3 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 48;
+  }
+}
+
+@keyframes dashFlow4 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -28;
+  }
+}
+
+@keyframes dashFlow5 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 40;
+  }
+}
+
+@keyframes dashFlow6 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -44;
+  }
+}
+
+@keyframes dashFlow7 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 28;
+  }
+}
+
+@keyframes dashFlow8 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -60;
+  }
+}
+
+@keyframes dashFlow9 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 68;
+  }
+}
+
+@keyframes dashFlow10 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -20;
+  }
+}
+
+@keyframes dashFlow11 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 56;
+  }
+}
+
+@keyframes dashFlow12 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -72;
+  }
+}
+
+@keyframes dashFlow13 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 32;
+  }
+}
+
+@keyframes dashFlow14 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -52;
+  }
+}
+
+@keyframes dashFlow15 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 64;
+  }
+}
+
+/* Performance optimizations */
+.wavy-pattern-animated {
+  will-change: transform;
+}
+
+.wavy-pattern-animated path {
+  will-change: stroke-dashoffset, opacity;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .wavy-pattern-animated,
+  .wavy-pattern-animated g,
+  .wavy-pattern-animated path {
+    animation: none;
+  }
+}

@@ -29,14 +29,14 @@ export default function RootLayout({
       <body
         className={cn(
           fontVariables,
-          "overscroll-none antialiased font-sans h-full bg-surface-1"
+          "overscroll-none antialiased font-sans h-full"
         )}
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem={false}
-          disableTransitionOnChange
+          disableTransitionOnChange={false}
         >
           {children}
         </ThemeProvider>
