@@ -5,6 +5,7 @@
 
 /* Partials */
 @import "./partials/index.css";
+@import "./themes/pure-ui.css";
 
 :root {
   --scrollbar-width-fallback: 17px;
@@ -33,11 +34,6 @@ html {
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   font-family: ui-sans-serif, system-ui, sans-serif;
-  height: 100%;
-}
-
-body {
-  height: 100%;
 }
 
 /* Selection */

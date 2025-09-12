@@ -2,6 +2,7 @@ import Link from "next/link";
 import { KamuiSiteHeaderDeskNav } from "./desk-nav";
 import { cn } from "@/lib/classes";
 import { KamuiSiteHeaderMobileNav } from "./mobile-nav";
+import { ThemeToggle } from "../theme-toggle";
 
 export function KamuiSiteHeader() {
   return (
@@ -21,11 +22,14 @@ export function KamuiSiteHeader() {
             </Link>
           </div>
 
-          <div className="max-md:hidden">
-            <KamuiSiteHeaderDeskNav />
-          </div>
-          <div className="min-md:hidden">
-            <KamuiSiteHeaderMobileNav />
+          <div className="flex items-center gap-4">
+            <div className="max-md:hidden flex items-center">
+              <KamuiSiteHeaderDeskNav />
+            </div>
+            <div className="min-md:hidden flex items-center">
+              <KamuiSiteHeaderMobileNav />
+            </div>
+            <ThemeToggle />
           </div>
         </nav>
       </div>

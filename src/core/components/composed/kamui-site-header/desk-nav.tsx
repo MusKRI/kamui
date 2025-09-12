@@ -23,9 +23,9 @@ export function KamuiSiteHeaderDeskNav() {
       </ul>
       <div className="absolute bottom-0 w-full left-0 flex items-center">
         <div className="w-full h-[1px] border-b border-surface-7 border-dashed"></div>
-        <div className="size-[0.3125rem] rounded-full absolute bottom-0 left-0 bg-surface-7 translate-x-[-2px] translate-y-[2px] ring-4 ring-surface-1"></div>
+        <div className="size-[0.3125rem] rounded-full absolute bottom-0 left-0 bg-surface-7 translate-x-[-2px] translate-y-[2px] ring-4 ring-transparent"></div>
         <div className="w-full h-[1px] border-b border-surface-7 border-dashed"></div>
-        <div className="size-[0.3125rem] rounded-full absolute bottom-0 right-0 bg-surface-7 translate-x-[2px] translate-y-[2px] ring-4 ring-surface-1"></div>
+        <div className="size-[0.3125rem] rounded-full absolute bottom-0 right-0 bg-surface-7 translate-x-[2px] translate-y-[2px] ring-4 ring-transparent"></div>
       </div>
     </>
   );

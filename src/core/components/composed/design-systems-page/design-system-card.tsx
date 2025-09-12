@@ -3,7 +3,11 @@
 import Link from "next/link";
 
 import { cn } from "@/lib/classes";
-import { getRandomWavyShapePattern } from "components/patterns/wavy-shape-patterns";
+import { useId } from "react";
+import {
+  getRandomWavyShapePattern,
+  WavyShapePattern,
+} from "components/patterns/wavy-shape-patterns";
 
 type ColorModeValue = string | { light: string; dark: string };
 
@@ -14,6 +18,8 @@ interface DesignSystemCardProps {
   animated?: boolean;
   href?: string;
   content?: React.ReactNode;
+  shapePattern?: WavyShapePattern;
+  shapeStopColors?: [ColorModeValue, ColorModeValue];
 }
 
 export function DesignSystemCard({
@@ -23,6 +29,8 @@ export function DesignSystemCard({
   animated = false,
   href = "#",
   content,
+  shapePattern = 1,
+  shapeStopColors = ["#bb3f60", "#bb3f60"],
 }: DesignSystemCardProps) {
   const toMode = (value: ColorModeValue) =>
     typeof value === "string" ? { light: value, dark: value } : value;
@@ -39,26 +47,29 @@ export function DesignSystemCard({
 
   const meshClass = cn("mesh-gradient", !animated && "mesh-gradient-static");
 
-  const WavyShapePattern = getRandomWavyShapePattern();
+  const WavyShapePattern = getRandomWavyShapePattern(shapePattern);
+
+  // Generate a stable, SSR-safe unique ID for this instance
+  const reactId = useId();
+  const uniquePatternId = `${reactId}-${shapePattern}`.replace(
+    /[^a-zA-Z0-9_-]/g,
+    ""
+  );
 
   return (
     <Link
       href={href}
-      className="relative group design-system-card"
+      className="relative group design-system-card focus:outline-none"
       style={cardVars}
     >
       <WavyShapePattern
+        key={`${shapePattern}-${shapeStopColors}`}
         className="size-65 sm:size-75 md:size-auto mx-auto"
-        stopColors={[
-          { light: blur.light, dark: blur.dark },
-          { light: border.light, dark: border.dark },
-        ]}
+        stopColors={shapeStopColors}
+        uniqueId={uniquePatternId}
       />
 
-      <div
-        className="absolute blur-3xl top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 size-20"
-        style={{ backgroundColor: "var(--card-blur-color)" }}
-      ></div>
+      <div className="absolute blur-2xl group-hover:blur-3xl group-focus:blur-3xl top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 size-18 [transition:filter_0.2s] ease-spring-soft bg-(--card-blur-color)"></div>
       <div className="inset-0 absolute flex flex-col">
         <div className="flex-1 grid place-content-center">
           <div

@@ -32,7 +32,7 @@ function MobileNavBottomGates({ isOpen }: MobileNavBottomGates) {
           isOpen && "[rotate:90deg]"
         )}
       ></div>
-      <div className="size-[0.3125rem] rounded-full absolute bottom-0 left-0 bg-surface-7 translate-x-[-2px] translate-y-[2px] ring-4 ring-surface-1"></div>
+      <div className="size-[0.3125rem] rounded-full absolute bottom-0 left-0 bg-surface-7 translate-x-[-2px] translate-y-[2px] ring-4 ring-transparent"></div>
       <div
         className={cn(
           "w-full h-[1px] border-b border-surface-7 border-dashed",
@@ -40,7 +40,7 @@ function MobileNavBottomGates({ isOpen }: MobileNavBottomGates) {
           isOpen && "[rotate:-90deg]"
         )}
       ></div>
-      <div className="size-[0.3125rem] rounded-full absolute bottom-0 right-0 bg-surface-7 translate-x-[2px] translate-y-[2px] ring-4 ring-surface-1"></div>
+      <div className="size-[0.3125rem] rounded-full absolute bottom-0 right-0 bg-surface-7 translate-x-[2px] translate-y-[2px] ring-4 ring-transparent"></div>
     </div>
   );
 }
@@ -103,7 +103,10 @@ function HamburgerButton({ isOpen, onClick }: HamburgerButtonProps) {
   };
 
   return (
-    <button onClick={onClick} className="cursor-pointer focus:outline-none">
+    <button
+      onClick={onClick}
+      className="cursor-pointer focus:outline-none self-center my-auto"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -157,15 +160,24 @@ function MobileNav({ isOpen, onClose }: MobileNavProps) {
       {isOpen && (
         <motion.div
           className="absolute left-0 right-0 top-full px-1 min-h-[200px] h-full"
-          initial={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }}
+          initial={{
+            opacity: 0,
+            clipPath: "inset(0 0 100% 0)",
+            backdropFilter: "blur(0px)",
+          }}
           animate={{
             opacity: 1,
             clipPath: "inset(0 0 0% 0)",
+            backdropFilter: "blur(6px)",
             transition: { delay: 0.1 },
           }}
-          exit={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }}
+          exit={{
+            opacity: 0,
+            clipPath: "inset(0 0 100% 0)",
+            backdropFilter: "blur(0px)",
+          }}
         >
-          <div className="w-full h-full bg-surface-1/80 backdrop-blur-sm rounded-lg px-4">
+          <div className="w-full h-full rounded-lg px-4">
             <ul className="flex flex-col items-center justify-center gap-3 h-full">
               {kamuiHeaderLinks.map((link) => (
                 <li key={link.label} className="flex items-center gap-4 group">

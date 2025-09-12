@@ -217,15 +217,10 @@
   --mesh-brightness: var(--mesh-brightness-override, 0.98);
 }
 
-@media (prefers-color-scheme: dark) {
-  .design-system-card {
-    --card-border-color: var(
-      --card-border-color-dark,
-      var(--card-border-color)
-    );
-    --card-blur-color: var(--card-blur-color-dark, var(--card-blur-color));
-    --mesh-color: var(--mesh-color-override, var(--card-blur-color));
-  }
+.dark .design-system-card {
+  --card-border-color: var(--card-border-color-dark, var(--card-border-color));
+  --card-blur-color: var(--card-blur-color-dark, var(--card-blur-color));
+  --mesh-color: var(--mesh-color-override, var(--card-blur-color));
 }
 
 .mesh-gradient {

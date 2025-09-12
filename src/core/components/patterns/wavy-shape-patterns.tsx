@@ -28,9 +28,14 @@ const toMode = (value: [ColorModeValue, ColorModeValue]) => {
 export function WavyShapePattern1(
   props: SVGProps<SVGSVGElement> & {
     stopColors?: [ColorModeValue, ColorModeValue];
+    uniqueId?: string;
   }
 ) {
-  const { stopColors = ["#303030", "hsl(0, 0%, 25%)"], ...rest } = props;
+  const {
+    stopColors = ["#303030", "hsl(0, 0%, 25%)"],
+    uniqueId = "default",
+    ...rest
+  } = props;
 
   const { stopColor1, stopColor2 } = toMode(stopColors);
 
@@ -43,7 +48,13 @@ export function WavyShapePattern1(
       {...rest}
     >
       <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="ccchaos-grad">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id={`ccchaos-grad-${uniqueId}`}
+        >
           <stop
             stopColor={stopColor1.light}
             stopOpacity="1"
@@ -72,7 +83,7 @@ export function WavyShapePattern1(
       </defs>
       <g
         strokeWidth="2"
-        stroke="url(#ccchaos-grad)"
+        stroke={`url(#ccchaos-grad-${uniqueId})`}
         fill="none"
         strokeLinecap="round"
       >
@@ -234,9 +245,16 @@ export function WavyShapePattern1(
 export function WavyShapePattern2(
   props: SVGProps<SVGSVGElement> & {
     stopColors?: [ColorModeValue, ColorModeValue];
+    uniqueId?: string;
   }
 ) {
-  const { stopColors = ["#303030", "hsl(0, 0%, 25%)"], ...rest } = props;
+  const {
+    stopColors = ["#303030", "hsl(0, 0%, 25%)"],
+    uniqueId = "default",
+    ...rest
+  } = props;
+
+  const { stopColor1, stopColor2 } = toMode(stopColors);
 
   return (
     <svg
@@ -247,18 +265,42 @@ export function WavyShapePattern2(
       {...rest}
     >
       <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="ccchaos-grad1">
-          <stop stopColor="#303030" stopOpacity="1" offset="0%"></stop>
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id={`ccchaos-grad1-${uniqueId}`}
+        >
           <stop
-            stopColor="hsl(0, 0%, 25%)"
+            stopColor={stopColor1.light}
+            stopOpacity="1"
+            offset="0%"
+            className="dark:hidden"
+          ></stop>
+          <stop
+            stopColor={stopColor2.light}
             stopOpacity="1"
             offset="100%"
+            className="dark:hidden"
+          ></stop>
+          <stop
+            stopColor={stopColor1.dark}
+            stopOpacity="1"
+            offset="0%"
+            className="hidden dark:block"
+          ></stop>
+          <stop
+            stopColor={stopColor2.dark}
+            stopOpacity="1"
+            offset="100%"
+            className="hidden dark:block"
           ></stop>
         </linearGradient>
       </defs>
       <g
         strokeWidth="2"
-        stroke="url(#ccchaos-grad1)"
+        stroke={`url(#ccchaos-grad1-${uniqueId})`}
         fill="none"
         strokeLinecap="round"
       >
@@ -417,10 +459,13 @@ export function WavyShapePattern2(
   );
 }
 
-export const wavyShapePatterns = [WavyShapePattern1, WavyShapePattern2];
+export const shapePatterns = {
+  1: WavyShapePattern1,
+  2: WavyShapePattern2,
+} as const;
 
-export function getRandomWavyShapePattern() {
-  return wavyShapePatterns[
-    Math.floor(Math.random() * wavyShapePatterns.length)
-  ];
+export type WavyShapePattern = keyof typeof shapePatterns;
+
+export function getRandomWavyShapePattern(whichPattern: WavyShapePattern) {
+  return shapePatterns[whichPattern];
 }
