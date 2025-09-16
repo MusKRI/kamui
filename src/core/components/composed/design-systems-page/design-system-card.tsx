@@ -6,7 +6,7 @@ import { cn } from "@/lib/classes";
 import { useId } from "react";
 import {
   getRandomWavyShapePattern,
-  WavyShapePattern,
+  type WavyShapePattern,
 } from "components/patterns/wavy-shape-patterns";
 
 type ColorModeValue = string | { light: string; dark: string };

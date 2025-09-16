@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-sizes-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "@pure-ui/components/badge-shadcn"
+  ],
+  "files": [
+    {
+      "path": "src/registry/pure-ui/components/shadcn/examples/badge/shadcn-badge-sizes-demo.tsx",
+      "content": "import { Badge } from \"@/registry/pure-ui/components/shadcn/ui/badge\";\r\n\r\nexport function BadgeSizesDemo() {\r\n  return (\r\n    <div className=\"flex flex-col items-center gap-4\">\r\n      <Badge size=\"sm\">Small</Badge>\r\n      <Badge size=\"md\">Medium</Badge>\r\n      <Badge size=\"lg\">Large</Badge>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

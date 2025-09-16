@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "@pure-ui/components/badge-shadcn"
+  ],
+  "files": [
+    {
+      "path": "src/registry/pure-ui/components/shadcn/examples/badge/badge-demo.tsx",
+      "content": "import { BadgeCheckIcon } from \"lucide-react\";\r\n\r\nimport { Badge } from \"@/registry/pure-ui/components/shadcn/ui/badge\";\r\n\r\nexport function BadgeDemo() {\r\n  return (\r\n    <div className=\"flex flex-col items-center gap-4\">\r\n      <div className=\"flex items-center justify-center w-full flex-wrap gap-2\">\r\n        <Badge>Default</Badge>\r\n        <Badge variant=\"secondary\">Secondary</Badge>\r\n        <Badge variant=\"destructive\">Destructive</Badge>\r\n        <Badge variant=\"outline\">Outline</Badge>\r\n      </div>\r\n      <div className=\"flex items-center justify-center w-full flex-wrap gap-2\">\r\n        <Badge\r\n          variant=\"secondary\"\r\n          className=\"bg-blue-500 text-white dark:bg-blue-600 rounded-full\"\r\n        >\r\n          <BadgeCheckIcon />\r\n          Verified\r\n        </Badge>\r\n        <Badge className=\"size-5 rounded-full p-0 font-mono tabular-nums\">\r\n          8\r\n        </Badge>\r\n        <Badge\r\n          className=\"h-5 min-w-5 rounded-full px-2 font-mono tabular-nums\"\r\n          variant=\"destructive\"\r\n        >\r\n          99\r\n        </Badge>\r\n        <Badge\r\n          className=\"h-5 min-w-5 rounded-full px-2 font-mono tabular-nums\"\r\n          variant=\"outline\"\r\n        >\r\n          20+\r\n        </Badge>\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

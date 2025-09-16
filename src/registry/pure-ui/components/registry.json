@@ -1,0 +1,63 @@
+{
+  "name": "pure-ui",
+  "homepage": "http://localhost:3000/pure-ui/components",
+  "items": [
+    {
+      "name": "badge-shadcn",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "A customizable badge component",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge",
+        "@radix-ui/react-slot"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/ui/badge/index.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "badge-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "@pure-ui/components/badge-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/badge/badge-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "badge-as-link-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "@pure-ui/components/badge-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/badge/shadcn-badge-as-link-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "badge-sizes-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "@pure-ui/components/badge-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/badge/shadcn-badge-sizes-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}

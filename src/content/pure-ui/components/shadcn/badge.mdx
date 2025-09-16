@@ -1,0 +1,77 @@
+---
+title: Badge
+description: Badges are small, circular or pill-shaped elements used to display status, notification counts, or labels. They draw attention to updates, unread messages, or categorized content. By conveying key information at a glance, badges improve navigation, boost engagement, and enhance overall usability.
+provider: shadcn
+features:
+  - "Different variants, sizes and border radiuses"
+  - "Supports icon and number content"
+---
+
+<ComponentShowcase name="badge-demo" />
+
+## Installation
+
+<Tabs defaultValue="terminal">
+  <TabsList>
+    <TabsTrigger value="terminal">
+      <Terminal className="w-4 h-4" />
+      Terminal
+    </TabsTrigger>
+    <TabsTrigger value="manual">
+      <Code2 className="w-4 h-4" />
+      Manual
+    </TabsTrigger>
+  </TabsList>
+  <TabsContent value="terminal">
+    <InstallationCommands
+      type="registry-installation"
+      registryPath="pure-ui/components/badge-shadcn"
+    />
+  </TabsContent>
+  <TabsContent value="manual">
+    <Steps>
+      <Step stepNumber={1} title="Install dependencies">
+        <InstallationCommands
+          type="package-installation"
+          npmCommand="npm install class-variance-authority clsx tailwind-merge @radix-ui/react-slot"
+          pnpmCommand="pnpm add class-variance-authority clsx tailwind-merge @radix-ui/react-slot"
+          yarnCommand="yarn add class-variance-authority clsx tailwind-merge @radix-ui/react-slot"
+          bunCommand="bun add class-variance-authority clsx tailwind-merge @radix-ui/react-slot"
+        />
+      </Step>
+      <Step
+        stepNumber={2}
+        title="Copy and paste the following code into your project"
+        isLast
+      >
+        <ComponentCodePreview name="badge-shadcn" />
+      </Step>
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Usage
+
+```tsx
+// Option #1. Basic usage:
+<Badge>Default</Badge>
+
+// Option #2. Custom usage:
+<Badge variant="secondary">Secondary</Badge>
+
+// Option #3. Custom usage:
+<Badge variant="destructive">Destructive</Badge>
+
+// Option #4. Custom usage:
+<Badge variant="outline">Outline</Badge>
+```
+
+## Examples
+
+### As Link
+
+<ComponentShowcase name="badge-as-link-demo" />
+
+### Sizes
+
+<ComponentShowcase name="badge-sizes-demo" />

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-shadcn",
+  "type": "registry:ui",
+  "title": "Badge",
+  "description": "A customizable badge component",
+  "dependencies": [
+    "class-variance-authority",
+    "clsx",
+    "tailwind-merge",
+    "@radix-ui/react-slot"
+  ],
+  "files": [
+    {
+      "path": "src/registry/pure-ui/components/shadcn/ui/badge/index.tsx",
+      "content": "import * as React from \"react\";\r\nimport { Slot } from \"@radix-ui/react-slot\";\r\nimport { cva, type VariantProps } from \"class-variance-authority\";\r\n\r\nimport { cn } from \"@/lib/classes\";\r\n\r\nconst badgeVariants = cva(\r\n  \"inline-flex items-center justify-center border font-medium w-fit whitespace-nowrap shrink-0 gap-1 [&>svg]:pointer-events-none focus-visible:border-(--focus) focus-visible:ring-(--focus)/50 focus-visible:ring-[3px] aria-invalid:ring-(--danger)/20 dark:aria-invalid:ring-(--danger)/40 aria-invalid:border-(--danger) transition-[color,box-shadow] overflow-hidden data-[disabled=true]:opacity-50 data-[disabled=true]:pointer-events-none\",\r\n  {\r\n    variants: {\r\n      variant: {\r\n        default:\r\n          \"border-transparent bg-(--accent) text-(--accent-foreground) [a&]:hover:bg-(--accent)/90\",\r\n        secondary:\r\n          \"border-transparent bg-(--surface-3) text-(--accent-soft-foreground) [a&]:hover:bg-[color:color-mix(in_oklab,black_10%,var(--accent-soft)_100%)] dark:[a&]:hover:bg-[color:color-mix(in_oklab,white_10%,var(--accent-soft)_100%)] [a&]:hover:text-(--default-foreground) focus-visible:border-[color:color-mix(in_oklab,black_50%,var(--muted-foreground)_100%)]\",\r\n        destructive:\r\n          \"[a&]:active:scale-95 border-(--danger)/10 bg-[color:color-mix(in_oklab,white_100%,var(--danger)_50%)] dark:bg-[color:color-mix(in_oklab,black_100%,var(--danger)_50%)] text-[color:color-mix(in_oklab,black_50%,var(--danger)_50%)] dark:text-[color:color-mix(in_oklab,white_50%,var(--danger)_50%)] [a&]:hover:bg-[color:color-mix(in_oklab,white_50%,var(--danger)_50%)] dark:[a&]:hover:bg-[color:color-mix(in_oklab,black_50%,var(--danger)_50%)] [a&]:hover:border-(--danger)/25 focus-visible:border-(--danger)/50\",\r\n        outline:\r\n          \"[a&]:active:scale-95 bg-(--accent)/10 border-(--accent)/50 text-(--accent) [a&]:hover:bg-(--accent)/20 [a&]:hover:border-(--accent) focus-visible:bg-(--accent)/20 focus-visible:border-(--accent)\",\r\n      },\r\n      size: {\r\n        sm: \"px-2 py-0.5 text-xs [&>svg]:size-3\",\r\n        md: \"px-2.5 py-0.5 text-sm [&>svg]:size-4\",\r\n        lg: \"px-3 py-1 text-base [&>svg]:size-5\",\r\n      },\r\n      radius: {\r\n        full: \"rounded-full\",\r\n        lg: \"rounded-lg\",\r\n        md: \"rounded-md\",\r\n        sm: \"rounded-sm\",\r\n      },\r\n    },\r\n    defaultVariants: {\r\n      variant: \"default\",\r\n      size: \"md\",\r\n      radius: \"md\",\r\n    },\r\n  }\r\n);\r\n\r\nfunction Badge({\r\n  className,\r\n  variant,\r\n  size,\r\n  radius,\r\n  asChild = false,\r\n  disabled = false,\r\n  ...props\r\n}: React.ComponentProps<\"span\"> &\r\n  VariantProps<typeof badgeVariants> & {\r\n    asChild?: boolean;\r\n    disabled?: boolean;\r\n  }) {\r\n  const Comp = asChild ? Slot : \"span\";\r\n\r\n  return (\r\n    <Comp\r\n      data-slot=\"badge\"\r\n      data-disabled={disabled}\r\n      className={cn(badgeVariants({ variant, size, radius }), className)}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nexport { Badge, badgeVariants };\r\n",
+      "type": "registry:ui"
+    }
+  ]
+}

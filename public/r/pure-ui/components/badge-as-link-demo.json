@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-as-link-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "@pure-ui/components/badge-shadcn"
+  ],
+  "files": [
+    {
+      "path": "src/registry/pure-ui/components/shadcn/examples/badge/shadcn-badge-as-link-demo.tsx",
+      "content": "import Link from \"next/link\";\r\n\r\nimport { Badge } from \"@/registry/pure-ui/components/shadcn/ui/badge\";\r\n\r\nexport function BadgeAsLinkDemo() {\r\n  return (\r\n    <div className=\"flex items-center justify-center w-full flex-wrap gap-2\">\r\n      <Badge asChild>\r\n        <Link href=\"https://www.google.com\" target=\"_blank\">\r\n          Default\r\n        </Link>\r\n      </Badge>\r\n      <Badge variant=\"secondary\" asChild>\r\n        <Link href=\"https://www.google.com\" target=\"_blank\">\r\n          Secondary\r\n        </Link>\r\n      </Badge>\r\n      <Badge variant=\"destructive\" asChild>\r\n        <Link href=\"https://www.google.com\" target=\"_blank\">\r\n          Destructive\r\n        </Link>\r\n      </Badge>\r\n      <Badge variant=\"outline\" asChild>\r\n        <Link href=\"https://www.google.com\" target=\"_blank\">\r\n          Outline\r\n        </Link>\r\n      </Badge>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

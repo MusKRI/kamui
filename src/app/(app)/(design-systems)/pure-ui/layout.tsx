@@ -1,9 +1,9 @@
-const PureUILayout = ({ children }: { children: React.ReactNode }) => {
+const PureUIWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="relative pure-ui bg-background text-foreground">
+    <div className="relative pure-ui bg-(--background) text-(--foreground)">
       {children}
     </div>
   );
 };
 
-export default PureUILayout;
+export default PureUIWrapper;
