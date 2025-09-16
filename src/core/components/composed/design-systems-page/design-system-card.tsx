@@ -58,7 +58,7 @@ export function DesignSystemCard({
 
   return (
     <Link
-      href={href}
+      href={href as any}
       className="relative group design-system-card focus:outline-none"
       style={cardVars}
     >
