@@ -9,7 +9,7 @@ export function KamuiSiteHeaderDeskNav() {
         {kamuiHeaderLinks.map((link) => (
           <li className="relative" key={link.label}>
             <Link
-              href={link.href}
+              href={link.href as any}
               className={cn(
                 "text-[15px] [transition:background-color_0.1s,color_0.1s,border-color_0.1s] [transition-timing-function:cubic-bezier(0.4,0,0.2,1)] text-surface-11/70 hover:text-surface-12 relative overflow-hidden",
                 "focus:outline-none",

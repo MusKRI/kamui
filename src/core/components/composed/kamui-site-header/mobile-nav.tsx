@@ -182,7 +182,7 @@ function MobileNav({ isOpen, onClose }: MobileNavProps) {
               {kamuiHeaderLinks.map((link) => (
                 <li key={link.label} className="flex items-center gap-4 group">
                   <Link
-                    href={link.href}
+                    href={link.href as any}
                     className="text-surface-10 text-2xl font-semibold group-hover:text-surface-12 [transition:color_0.1s] [transition-timing-function:cubic-bezier(0.4,0,0.2,1)]"
                   >
                     {link.label}
