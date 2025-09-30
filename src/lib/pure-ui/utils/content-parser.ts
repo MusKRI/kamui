@@ -31,6 +31,11 @@ const matterEffect = (content: string) =>
 export interface ParsedContent {
   source: string;
   frontmatter: Record<string, any>;
+  headings: Array<{
+    id: string;
+    text: string;
+    level: number;
+  }>;
 }
 
 export const getContentByPath = (relativePath: string) =>
@@ -41,10 +46,40 @@ export const getContentByPath = (relativePath: string) =>
     const fileContent = yield* readFileEffect(fullPath);
     const { content, data } = yield* matterEffect(fileContent);
 
+    // Extract headings for table of contents
+    const headings = extractHeadings(content);
+
     const result: ParsedContent = {
       source: content,
       frontmatter: data,
+      headings,
     };
 
     return result;
   });
+
+function extractHeadings(content: string) {
+  const headingRegex = /^(#{1,6})\s+(.+)$/gm;
+  const headings: Array<{
+    id: string;
+    text: string;
+    level: number;
+  }> = [];
+
+  let match;
+  while ((match = headingRegex.exec(content)) !== null) {
+    const level = match[1].length;
+    const text = match[2].trim();
+    const id = text
+      .replace(/ /g, "-")
+      .replace(/'/g, "")
+      .replace(/\?/g, "")
+      .replace(/&/g, "and")
+      .replace(/[^\w\-]/g, "")
+      .toLowerCase();
+
+    headings.push({ id, text, level });
+  }
+
+  return headings;
+}

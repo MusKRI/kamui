@@ -26,11 +26,106 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "button-shadcn": {
+    name: "button-shadcn",
+    description: "A customizable button component",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    dependencies: ["class-variance-authority","clsx","tailwind-merge","@radix-ui/react-slot"],
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/ui/button/index.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/ui/button/index.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "checkbox-shadcn": {
+    name: "checkbox-shadcn",
+    description: "A customizable checkbox component",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    dependencies: ["class-variance-authority","clsx","tailwind-merge","@radix-ui/react-checkbox"],
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/ui/checkbox/index.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/ui/checkbox/index.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "dialog-shadcn": {
+    name: "dialog-shadcn",
+    description: "A customizable dialog component",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    dependencies: ["class-variance-authority","clsx","tailwind-merge","@radix-ui/react-dialog","motion"],
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/ui/dialog/index.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/ui/dialog/index.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "input-otp-shadcn": {
+    name: "input-otp-shadcn",
+    description: "A customizable input OTP component",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    dependencies: ["class-variance-authority","clsx","tailwind-merge","input-otp","motion"],
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/ui/input-otp/index.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/ui/input-otp/index.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "switch-shadcn": {
+    name: "switch-shadcn",
+    description: "A customizable switch component",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    dependencies: ["class-variance-authority","clsx","tailwind-merge","@radix-ui/react-switch"],
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/ui/switch/index.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/ui/switch/index.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "badge-demo": {
     name: "badge-demo",
     description: "",
     type: "registry:example",
-    registryDependencies: ["@pure-ui/components/badge-shadcn"],
+    registryDependencies: ["badge-shadcn"],
     dependencies: undefined,
     files: [{
       path: "src/registry/pure-ui/components/shadcn/examples/badge/badge-demo.tsx",
@@ -49,7 +144,7 @@ export const Index: Record<string, any> = {
     name: "badge-as-link-demo",
     description: "",
     type: "registry:example",
-    registryDependencies: ["@pure-ui/components/badge-shadcn"],
+    registryDependencies: ["badge-shadcn"],
     dependencies: undefined,
     files: [{
       path: "src/registry/pure-ui/components/shadcn/examples/badge/shadcn-badge-as-link-demo.tsx",
@@ -68,7 +163,7 @@ export const Index: Record<string, any> = {
     name: "badge-sizes-demo",
     description: "",
     type: "registry:example",
-    registryDependencies: ["@pure-ui/components/badge-shadcn"],
+    registryDependencies: ["badge-shadcn"],
     dependencies: undefined,
     files: [{
       path: "src/registry/pure-ui/components/shadcn/examples/badge/shadcn-badge-sizes-demo.tsx",
@@ -77,6 +172,576 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pure-ui/components/shadcn/examples/badge/shadcn-badge-sizes-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "badge-radius-demo": {
+    name: "badge-radius-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["badge-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/badge/shadcn-badge-radius-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/badge/shadcn-badge-radius-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "button-demo": {
+    name: "button-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["button-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/button/shadcn-button-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/button/shadcn-button-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "button-size-demo": {
+    name: "button-size-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["button-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/button/shadcn-button-size-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/button/shadcn-button-size-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "button-radius-demo": {
+    name: "button-radius-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["button-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/button/shadcn-button-radius-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/button/shadcn-button-radius-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "button-variants-demo": {
+    name: "button-variants-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["button-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/button/shadcn-button-variants-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/button/shadcn-button-variants-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "button-pending-demo": {
+    name: "button-pending-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["button-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/button/shadcn-button-pending-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/button/shadcn-button-pending-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "button-reduce-motion-demo": {
+    name: "button-reduce-motion-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["button-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/button/shadcn-button-reduce-motion-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/button/shadcn-button-reduce-motion-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "checkbox-demo": {
+    name: "checkbox-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["checkbox-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/checkbox/shadcn-checkbox-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/checkbox/shadcn-checkbox-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "shadcn-checkbox-disabled-demo": {
+    name: "shadcn-checkbox-disabled-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["checkbox-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/checkbox/shadcn-checkbox-disabled-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/checkbox/shadcn-checkbox-disabled-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "shadcn-checkbox-sizes-demo": {
+    name: "shadcn-checkbox-sizes-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["checkbox-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/checkbox/shadcn-checkbox-sizes-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/checkbox/shadcn-checkbox-sizes-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "shadcn-checkbox-radius-demo": {
+    name: "shadcn-checkbox-radius-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["checkbox-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/checkbox/shadcn-checkbox-radius-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/checkbox/shadcn-checkbox-radius-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "shadcn-checkbox-icons-demo": {
+    name: "shadcn-checkbox-icons-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["checkbox-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/checkbox/shadcn-checkbox-icons-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/checkbox/shadcn-checkbox-icons-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "dialog-demo": {
+    name: "dialog-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["dialog-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/dialog/shadcn-dialog-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/dialog/shadcn-dialog-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "dialog-flips-demo": {
+    name: "dialog-flips-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["dialog-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/dialog/shadcn-dialog-flips-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/dialog/shadcn-dialog-flips-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "dialog-slides-demo": {
+    name: "dialog-slides-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["dialog-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/dialog/shadcn-dialog-slides-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/dialog/shadcn-dialog-slides-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "dialog-wipes-demo": {
+    name: "dialog-wipes-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["dialog-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/dialog/shadcn-dialog-wipes-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/dialog/shadcn-dialog-wipes-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "input-otp-demo": {
+    name: "input-otp-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["input-otp-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "input-otp-disabled-demo": {
+    name: "input-otp-disabled-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["input-otp-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-disabled-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-disabled-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "input-otp-sizes-demo": {
+    name: "input-otp-sizes-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["input-otp-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-sizes-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-sizes-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "input-otp-variants-demo": {
+    name: "input-otp-variants-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["input-otp-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-variants-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-variants-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "input-otp-separator-demo": {
+    name: "input-otp-separator-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["input-otp-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-separator-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-separator-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "input-otp-patterns-demo": {
+    name: "input-otp-patterns-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["input-otp-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-patterns-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-patterns-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "input-otp-controlled-demo": {
+    name: "input-otp-controlled-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["input-otp-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-controlled-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-controlled-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "switch-demo": {
+    name: "switch-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["switch-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/switch/switch-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/switch/switch-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "shadcn-switch-size-demo": {
+    name: "shadcn-switch-size-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["switch-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-size-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-size-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "shadcn-switch-elastic-demo": {
+    name: "shadcn-switch-elastic-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["switch-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-elastic-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-elastic-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "shadcn-switch-reduce-motion-demo": {
+    name: "shadcn-switch-reduce-motion-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["switch-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-reduce-motion-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-reduce-motion-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "shadcn-switch-disabled-demo": {
+    name: "shadcn-switch-disabled-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["switch-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-disabled-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-disabled-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "shadcn-switch-thumb-icon-demo": {
+    name: "shadcn-switch-thumb-icon-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["switch-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-thumb-icon-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-thumb-icon-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "shadcn-switch-icons-demo": {
+    name: "shadcn-switch-icons-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["switch-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-icons-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-icons-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),

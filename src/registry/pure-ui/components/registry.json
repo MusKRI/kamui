@@ -21,10 +21,102 @@
       ]
     },
     {
+      "name": "button-shadcn",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "A customizable button component",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge",
+        "@radix-ui/react-slot"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/ui/button/index.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-shadcn",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "A customizable checkbox component",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge",
+        "@radix-ui/react-checkbox"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/ui/checkbox/index.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dialog-shadcn",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "A customizable dialog component",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge",
+        "@radix-ui/react-dialog",
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/ui/dialog/index.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-shadcn",
+      "type": "registry:ui",
+      "title": "Input OTP",
+      "description": "A customizable input OTP component",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge",
+        "input-otp",
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/ui/input-otp/index.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "switch-shadcn",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "A customizable switch component",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge",
+        "@radix-ui/react-switch"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/ui/switch/index.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "badge-demo",
       "type": "registry:example",
       "registryDependencies": [
-        "@pure-ui/components/badge-shadcn"
+        "badge-shadcn"
       ],
       "files": [
         {
@@ -37,7 +129,7 @@
       "name": "badge-as-link-demo",
       "type": "registry:example",
       "registryDependencies": [
-        "@pure-ui/components/badge-shadcn"
+        "badge-shadcn"
       ],
       "files": [
         {
@@ -50,11 +142,401 @@
       "name": "badge-sizes-demo",
       "type": "registry:example",
       "registryDependencies": [
-        "@pure-ui/components/badge-shadcn"
+        "badge-shadcn"
       ],
       "files": [
         {
           "path": "src/registry/pure-ui/components/shadcn/examples/badge/shadcn-badge-sizes-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "badge-radius-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "badge-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/badge/shadcn-badge-radius-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "button-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/button/shadcn-button-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "button-size-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/button/shadcn-button-size-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "button-radius-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/button/shadcn-button-radius-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "button-variants-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/button/shadcn-button-variants-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "button-pending-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/button/shadcn-button-pending-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "button-reduce-motion-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "button-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/button/shadcn-button-reduce-motion-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "checkbox-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/checkbox/shadcn-checkbox-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "shadcn-checkbox-disabled-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "checkbox-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/checkbox/shadcn-checkbox-disabled-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "shadcn-checkbox-sizes-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "checkbox-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/checkbox/shadcn-checkbox-sizes-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "shadcn-checkbox-radius-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "checkbox-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/checkbox/shadcn-checkbox-radius-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "shadcn-checkbox-icons-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "checkbox-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/checkbox/shadcn-checkbox-icons-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dialog-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dialog-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/dialog/shadcn-dialog-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dialog-flips-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dialog-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/dialog/shadcn-dialog-flips-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dialog-slides-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dialog-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/dialog/shadcn-dialog-slides-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dialog-wipes-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dialog-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/dialog/shadcn-dialog-wipes-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-otp-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-disabled-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-otp-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-disabled-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-sizes-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-otp-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-sizes-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-variants-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-otp-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-variants-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-separator-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-otp-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-separator-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-patterns-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-otp-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-patterns-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-controlled-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "input-otp-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/input-otp/shadcn-input-otp-controlled-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "switch-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "switch-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/switch/switch-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "shadcn-switch-size-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "switch-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-size-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "shadcn-switch-elastic-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "switch-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-elastic-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "shadcn-switch-reduce-motion-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "switch-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-reduce-motion-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "shadcn-switch-disabled-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "switch-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-disabled-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "shadcn-switch-thumb-icon-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "switch-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-thumb-icon-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "shadcn-switch-icons-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "switch-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-icons-demo.tsx",
           "type": "registry:component"
         }
       ]

@@ -116,7 +116,7 @@ export function TabsTrigger({
     <TabsPrimitive.Trigger
       value={value}
       className={cn(
-        "relative flex items-center gap-2 px-3 py-0.5 text-sm font-medium [transition:color_0.05s] ease-spring-soft rounded-lg transform",
+        "relative flex items-center gap-2 px-3 py-0.5 text-sm font-medium [transition:color_0.05s] ease-spring-soft rounded-lg transform-gpu",
         isActive
           ? "text-(--foreground)"
           : "text-(--muted-foreground) hover:text-(--foreground)",

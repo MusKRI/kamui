@@ -1,7 +1,10 @@
 import Link from "next/link";
 
 import { SlashIcon } from "icons/icons1";
-import { ThemeToggle } from "../../composed/theme-toggle";
+import { ThemeToggle } from "components/composed/theme-toggle";
+import { PureUIHeaderNav } from "./pure-ui-header-nav";
+
+import { PureUISidebarToggleButton } from "./sidebar-toggle-button";
 
 export const PureUIHeader = () => {
   return (
@@ -9,6 +12,7 @@ export const PureUIHeader = () => {
       <div className="mx-auto w-full max-w-full">
         <div className="flex h-16 items-center justify-between gap-2 md:gap-4 px-6">
           <div className="mr-6 sm:mr-12 flex gap-2 md:gap-0">
+            <PureUISidebarToggleButton />
             <div className="flex items-center gap-1">
               <Link
                 href="/"
@@ -45,26 +49,7 @@ export const PureUIHeader = () => {
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <div className="hidden md:flex space-x-4 lg:space-x-8">
-              <Link
-                href="/pure-ui/docs"
-                className="text-base hover:text-black/80 dark:text-white dark:hover:text-white/80"
-              >
-                Docs
-              </Link>
-              <Link
-                href="/pure-ui/components"
-                className="text-base hover:text-black/80 dark:text-white dark:hover:text-white/80"
-              >
-                Components
-              </Link>
-              <Link
-                href="/pure-ui/blocks"
-                className="text-base text-black/70 hover:text-black/90 dark:text-white/70 dark:hover:text-white/90"
-              >
-                Blocks
-              </Link>
-            </div>
+            <PureUIHeaderNav />
           </div>
 
           <div className="flex items-center gap-2">

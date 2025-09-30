@@ -7,15 +7,15 @@ const pureUIDocs = [
     defaultExpanded: true,
     items: [
       {
-        id: "theme",
-        title: "Theme",
-        href: "/pure-ui/docs/theme",
-      },
-      {
         id: "introduction",
         title: "Introduction",
         href: "/pure-ui/docs",
       },
+      // {
+      //   id: "theme",
+      //   title: "Theme",
+      //   href: "/pure-ui/docs/theme",
+      // },
     ].sort((a, b) => a.title.localeCompare(b.title)),
   },
 ] satisfies SidebarSection[];
@@ -26,16 +26,16 @@ const pureUIComponents = [
     title: "Shadcn",
     defaultExpanded: false,
     items: [
-      {
-        id: "accordion",
-        title: "Accordion",
-        href: "/pure-ui/components/shadcn/accordion",
-      },
-      {
-        id: "alert",
-        title: "Alert",
-        href: "/pure-ui/components/shadcn/alert",
-      },
+      // {
+      //   id: "accordion",
+      //   title: "Accordion",
+      //   href: "/pure-ui/components/shadcn/accordion",
+      // },
+      // {
+      //   id: "alert",
+      //   title: "Alert",
+      //   href: "/pure-ui/components/shadcn/alert",
+      // },
       {
         id: "badge",
         title: "Badge",
@@ -56,21 +56,26 @@ const pureUIComponents = [
         title: "Dialog",
         href: "/pure-ui/components/shadcn/dialog",
       },
+      // {
+      //   id: "dropdown-menu",
+      //   title: "Dropdown Menu",
+      //   href: "/pure-ui/components/shadcn/dropdown-menu",
+      // },
+      // {
+      //   id: "input",
+      //   title: "Input",
+      //   href: "/pure-ui/components/shadcn/input",
+      // },
       {
-        id: "dropdown-menu",
-        title: "Dropdown Menu",
-        href: "/pure-ui/components/shadcn/dropdown-menu",
+        id: "input-otp",
+        title: "Input OTP",
+        href: "/pure-ui/components/shadcn/input-otp",
       },
-      {
-        id: "input",
-        title: "Input",
-        href: "/pure-ui/components/shadcn/input",
-      },
-      {
-        id: "popover",
-        title: "Popover",
-        href: "/pure-ui/components/shadcn/popover",
-      },
+      // {
+      //   id: "popover",
+      //   title: "Popover",
+      //   href: "/pure-ui/components/shadcn/popover",
+      // },
       {
         id: "switch",
         title: "Switch",
@@ -78,62 +83,53 @@ const pureUIComponents = [
       },
     ].sort((a, b) => a.title.localeCompare(b.title)),
   },
-  {
-    id: "base-ui",
-    title: "Base UI",
-    defaultExpanded: false,
-    items: [
-      {
-        id: "collapsible",
-        title: "Collapsible",
-        href: "/pure-ui/components/base-ui/collapsible",
-      },
-      {
-        id: "switch",
-        title: "Switch",
-        href: "/pure-ui/components/base-ui/switch",
-      },
-    ].sort((a, b) => a.title.localeCompare(b.title)),
-  },
-  {
-    id: "react-aria",
-    title: "React Aria",
-    defaultExpanded: false,
-    items: [
-      {
-        id: "button",
-        title: "Button",
-        href: "/pure-ui/components/react-aria/button",
-      },
-    ].sort((a, b) => a.title.localeCompare(b.title)),
-  },
-  {
-    id: "custom",
-    title: "Custom",
-    defaultExpanded: false,
-    items: [
-      {
-        id: "dropdown-menu",
-        title: "Dropdown Menu",
-        href: "/pure-ui/components/custom/dropdown-menu",
-      },
-      {
-        id: "input-otp",
-        title: "Input OTP",
-        href: "/pure-ui/components/custom/input-otp",
-      },
-      {
-        id: "spinner",
-        title: "Spinner",
-        href: "/pure-ui/components/custom/spinner",
-      },
-      // {
-      //   id: "select",
-      //   title: "Select",
-      //   href: "/pure-ui/components/custom/select",
-      // },
-    ].sort((a, b) => a.title.localeCompare(b.title)),
-  },
+  // {
+  //   id: "base-ui",
+  //   title: "Base UI",
+  //   defaultExpanded: false,
+  //   items: [
+  //     {
+  //       id: "collapsible",
+  //       title: "Collapsible",
+  //       href: "/pure-ui/components/base-ui/collapsible",
+  //     },
+  //     {
+  //       id: "switch",
+  //       title: "Switch",
+  //       href: "/pure-ui/components/base-ui/switch",
+  //     },
+  //   ].sort((a, b) => a.title.localeCompare(b.title)),
+  // },
+  // {
+  //   id: "react-aria",
+  //   title: "React Aria",
+  //   defaultExpanded: false,
+  //   items: [
+  //     {
+  //       id: "button",
+  //       title: "Button",
+  //       href: "/pure-ui/components/react-aria/button",
+  //     },
+  //   ].sort((a, b) => a.title.localeCompare(b.title)),
+  // },
+  // {
+  //   id: "custom",
+  //   title: "Custom",
+  //   defaultExpanded: false,
+  //   items: [
+  //     {
+  //       id: "dropdown-menu",
+  //       title: "Dropdown Menu",
+  //       href: "/pure-ui/components/custom/dropdown-menu",
+  //     },
+
+  //     {
+  //       id: "spinner",
+  //       title: "Spinner",
+  //       href: "/pure-ui/components/custom/spinner",
+  //     },
+  //   ].sort((a, b) => a.title.localeCompare(b.title)),
+  // },
 ] satisfies SidebarSection[];
 
 export const pureUISidebarConfig: SidebarConfig = {

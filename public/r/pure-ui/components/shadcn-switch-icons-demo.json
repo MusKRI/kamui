@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shadcn-switch-icons-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "switch-shadcn"
+  ],
+  "files": [
+    {
+      "path": "src/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-icons-demo.tsx",
+      "content": "import { CheckIcon, XIcon } from \"lucide-react\";\r\nimport { Switch } from \"@/registry/pure-ui/components/shadcn/ui/switch\";\r\n\r\nexport function SwitchIconsDemo() {\r\n  return (\r\n    <div className=\"flex flex-col items-center justify-center gap-4\">\r\n      <Switch\r\n        elastic\r\n        size=\"lg\"\r\n        leftIcon={<XIcon />}\r\n        rightIcon={<CheckIcon />}\r\n      />\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+---
+title: Dialog
+description: A customizable dialog component
+provider: shadcn
+features:
+  - "Rich animation presets"
+  - "Customizable transitions & easing curves"
+  - "Reduced motion support & accessibility"
+  - "Composable sub-components & portal rendering"
+---
+
+<ComponentShowcase name="dialog-demo" />
+
+## Installation
+
+<Tabs defaultValue="terminal">
+  <TabsList>
+    <TabsTrigger value="terminal">
+      <Terminal className="w-4 h-4" />
+      Terminal
+    </TabsTrigger>
+    <TabsTrigger value="manual">
+      <Code2 className="w-4 h-4" />
+      Manual
+    </TabsTrigger>
+  </TabsList>
+  <TabsContent value="terminal">
+    <InstallationCommands
+      type="registry-installation"
+      registryPath="pure-ui/components/dialog-shadcn"
+    />
+  </TabsContent>
+  <TabsContent value="manual">
+    <Steps currentStep={1}>
+      <Step stepNumber={1} title="Install dependencies">
+        <InstallationCommands
+          type="package-installation"
+          npmCommand="npm install class-variance-authority clsx tailwind-merge @radix-ui/react-dialog motion"
+          pnpmCommand="pnpm add class-variance-authority clsx tailwind-merge @radix-ui/react-dialog motion"
+          yarnCommand="yarn add class-variance-authority clsx tailwind-merge @radix-ui/react-dialog motion"
+          bunCommand="bun add class-variance-authority clsx tailwind-merge @radix-ui/react-dialog motion"
+        />
+      </Step>
+      <Step
+        stepNumber={2}
+        title="Add cn function to your utils"
+      >
+        ```ts
+        import { clsx, type ClassValue } from "clsx";
+        import { twMerge } from "tailwind-merge";
+
+        export function cn(...inputs: ClassValue[]) {
+          return twMerge(clsx(inputs));
+        }
+        ```
+      </Step>
+      <Step
+        stepNumber={3}
+        title="Copy and paste the following code into your project"
+        isLast
+      >
+        <ComponentCodePreview name="dialog-shadcn" />
+      </Step>
+    </Steps>
+
+  </TabsContent>
+</Tabs>
+
+## Animation Presets
+
+### Flips
+
+<ComponentShowcase name="dialog-flips-demo" />
+
+### Slides
+
+<ComponentShowcase name="dialog-slides-demo" />
+
+### Wipes
+
+<ComponentShowcase name="dialog-wipes-demo" />

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shadcn-switch-size-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "switch-shadcn"
+  ],
+  "files": [
+    {
+      "path": "src/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-size-demo.tsx",
+      "content": "import { Switch } from \"@/registry/pure-ui/components/shadcn/ui/switch\";\r\n\r\nexport function SwitchSizeDemo() {\r\n  return (\r\n    <div className=\"flex flex-col items-center justify-center gap-4\">\r\n      <Switch size=\"xs\" />\r\n      <Switch size=\"sm\" />\r\n      <Switch size=\"default\" />\r\n      <Switch size=\"lg\" />\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

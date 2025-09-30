@@ -35,7 +35,7 @@ export default function DesignSystemsPage() {
               href="/pure-ui"
               key="pure-ui"
             />
-            <DesignSystemCard
+            {/* <DesignSystemCard
               borderColor={{
                 light: "#3e9cfe",
                 dark: "#57a2ff",
@@ -49,11 +49,11 @@ export default function DesignSystemsPage() {
               shapePattern={1}
               shapeStopColors={["#3e9cfe", "#57a2ff"]}
               key="edible-ui"
-            />
+            /> */}
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 mt-10">
+        {/* <div className="flex flex-col gap-4 mt-10">
           <div className="flex flex-col gap-2">
             <h2 className="text-surface-12 text-xl md:text-2xl font-merriweather">
               Design Systems You Already Know
@@ -82,7 +82,7 @@ export default function DesignSystemsPage() {
               key="netflix"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

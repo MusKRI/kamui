@@ -54,13 +54,13 @@ export default function Home() {
 
         <div className="mt-12">
           <div className="w-fit h-fit mx-auto">
-            <div className="smooth-rounded-curvature w-full h-full">
+            <div className="w-full h-full">
               <Link
-                href="#"
+                href="/design-systems"
                 className="relative flex items-center justify-center bg-gradient-to-b from-primary-8 to-primary-9 rounded-[7px] text-base w-full overflow-hidden focus:outline-none shadow-[inset_0_0.5px_var(--color-primary-11),inset_0_0_0_0.5px_var(--color-primary-10)] [transition:scale_0.15s_ease-out] active:scale-98 px-5 py-1.5"
               >
                 <span className="bg-gradient-to-b from-surface-4 dark:from-surface-12 to-primary-1 dark:to-primary-12 bg-clip-text text-transparent font-medium drop-shadow-[0_1px_0] drop-shadow-primary-11/35 size-full flex items-center justify-center">
-                  Get Started
+                  Explore Design Systems
                 </span>
               </Link>
             </div>

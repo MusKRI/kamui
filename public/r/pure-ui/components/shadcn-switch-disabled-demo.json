@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shadcn-switch-disabled-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "switch-shadcn"
+  ],
+  "files": [
+    {
+      "path": "src/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-disabled-demo.tsx",
+      "content": "import { Switch } from \"@/registry/pure-ui/components/shadcn/ui/switch\";\r\n\r\nexport function SwitchDisabledDemo() {\r\n  return <Switch disabled defaultChecked />;\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

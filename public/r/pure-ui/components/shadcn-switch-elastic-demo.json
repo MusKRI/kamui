@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shadcn-switch-elastic-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "switch-shadcn"
+  ],
+  "files": [
+    {
+      "path": "src/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-elastic-demo.tsx",
+      "content": "import { Switch } from \"@/registry/pure-ui/components/shadcn/ui/switch\";\r\n\r\nexport function SwitchElasticDemo() {\r\n  return <Switch elastic />;\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

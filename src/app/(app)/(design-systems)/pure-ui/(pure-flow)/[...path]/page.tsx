@@ -89,10 +89,11 @@ export default async function PureUIFlowPage(
   if (contentExit._tag === "Failure") {
     notFound();
   }
+
   const content = contentExit.value;
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col scroll-smooth">
       <PureUIBodyInfo content={content} />
       <PureUIBodyContent parsedContent={content} />
     </div>

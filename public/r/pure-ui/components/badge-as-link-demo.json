@@ -3,7 +3,7 @@
   "name": "badge-as-link-demo",
   "type": "registry:example",
   "registryDependencies": [
-    "@pure-ui/components/badge-shadcn"
+    "badge-shadcn"
   ],
   "files": [
     {

@@ -32,7 +32,7 @@ export function FadeWrapper({ children }: Props) {
   }, [scrollY]);
 
   return (
-    <div className="relative bg-surface-1">
+    <div className="relative bg-surface-1 h-full min-h-svh">
       {/* Global top fade + blur overlay */}
       <motion.div
         className={cn(
@@ -55,7 +55,7 @@ export function FadeWrapper({ children }: Props) {
       {/* Global bottom fade + blur overlay */}
       <motion.div
         className={cn(
-          "fixed bottom-0 inset-x-0 h-12 z-30 pointer-events-none [--clr:#151515]",
+          "fixed bottom-0 inset-x-0 h-12 z-100 pointer-events-none [--clr:#151515]",
           "bg-gradient-to-t from-transparent to-background/40 backdrop-blur-[6px] max-w-[1120px] mx-auto"
         )}
         style={{

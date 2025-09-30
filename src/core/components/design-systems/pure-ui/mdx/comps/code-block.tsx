@@ -32,7 +32,7 @@ export async function CodeElement({
     return (
       <code
         className={cn(
-          "PureInlineCode relative rounded bg-(--muted) px-[0.3rem] py-[0.2rem] font-mono text-sm font-medium text-(--foreground)",
+          "PureInlineCode relative border border-(--border) rounded bg-(--muted) px-[0.3rem] py-[0.2rem] font-mono text-sm font-medium text-(--foreground)",
           className
         )}
         {...props}
