@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import Link from "next/link";
 
+import { Button } from "@/registry/pure-ui/components/shadcn/ui/button";
+
 export const metadata: Metadata = {
   title: "Pure UI",
   description:
@@ -53,28 +55,30 @@ const PureUIPage = () => {
             aesthetics and minimal complexity.
           </p>
 
-          <Link
-            href="/pure-ui/docs"
-            className="group inline-flex items-center gap-3 bg-(--foreground) text-(--background) px-8 py-3 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl border border-(--foreground)/10"
-            style={{ willChange: "transform" }}
-          >
-            <span className="tracking-wide">Explore</span>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              className="transition-transform group-hover:translate-x-1"
+          <Button asChild>
+            <Link
+              href="/pure-ui/docs"
+              className="flex items-center gap-2"
+              style={{ willChange: "transform" }}
             >
-              <path
-                d="M5 12h14M12 5l7 7-7 7"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Link>
+              <span className="tracking-wide">Explore</span>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                className="transition-transform group-hover:translate-x-1"
+              >
+                <path
+                  d="M5 12h14M12 5l7 7-7 7"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </Link>
+          </Button>
         </div>
       </div>
     </div>

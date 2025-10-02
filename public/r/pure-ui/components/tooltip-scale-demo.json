@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-scale-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "tooltip-shadcn"
+  ],
+  "files": [
+    {
+      "path": "src/registry/pure-ui/components/shadcn/examples/tooltip/shadcn-tooltip-scale-demo.tsx",
+      "content": "import { PlusIcon } from \"lucide-react\";\r\n\r\nimport {\r\n  Tooltip,\r\n  TooltipContent,\r\n  TooltipTrigger,\r\n} from \"@/registry/pure-ui/components/shadcn/ui/tooltip\";\r\nimport { Button } from \"@/registry/pure-ui/components/shadcn/ui/button\";\r\n\r\nexport function TooltipScaleDemo() {\r\n  return (\r\n    <Tooltip>\r\n      <TooltipTrigger asChild>\r\n        <Button variant=\"outline\" className=\"rounded-full px-[7px]\" size=\"sm\">\r\n          <PlusIcon className=\"size-4\" />\r\n        </Button>\r\n      </TooltipTrigger>\r\n      <TooltipContent animationPreset=\"scale\" transitionPreset=\"inOut\">\r\n        <p>Add to library</p>\r\n      </TooltipContent>\r\n    </Tooltip>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

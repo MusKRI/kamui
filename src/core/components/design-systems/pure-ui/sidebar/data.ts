@@ -81,6 +81,11 @@ const pureUIComponents = [
         title: "Switch",
         href: "/pure-ui/components/shadcn/switch",
       },
+      {
+        id: "tooltip",
+        title: "Tooltip",
+        href: "/pure-ui/components/shadcn/tooltip",
+      },
     ].sort((a, b) => a.title.localeCompare(b.title)),
   },
   // {

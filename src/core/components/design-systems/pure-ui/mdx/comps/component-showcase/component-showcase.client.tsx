@@ -79,8 +79,8 @@ export function ComponentShowcaseClient({
                     className="rounded-[12px] bg-(--muted) border border-(--border)"
                   >
                     <div className="px-8 flex items-center justify-center pb-12 pt-12 h-full">
-                      <div className="relative h-full w-full">
-                        <div className="relative flex items-center justify-center min-h-full">
+                      <div className="h-full w-full">
+                        <div className="flex items-center justify-center min-h-full h-full">
                           {ComponentDemo ? (
                             <div className="transform w-full flex items-center justify-center py-4">
                               <ComponentDemo />

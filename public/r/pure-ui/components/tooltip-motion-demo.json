@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-motion-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "tooltip-shadcn"
+  ],
+  "files": [
+    {
+      "path": "src/registry/pure-ui/components/shadcn/examples/tooltip/shadcn-tooltip-motion-demo.tsx",
+      "content": "import {\r\n  Tooltip,\r\n  TooltipContent,\r\n  TooltipTrigger,\r\n} from \"@/registry/pure-ui/components/shadcn/ui/tooltip\";\r\nimport { Button } from \"@/registry/pure-ui/components/shadcn/ui/button\";\r\n\r\nexport function TooltipMotionDemo() {\r\n  return (\r\n    <div className=\"w-full h-full flex items-center justify-center gap-4\">\r\n      <Tooltip>\r\n        <TooltipTrigger asChild>\r\n          <Button variant=\"outline\" size=\"sm\">\r\n            Motion Demo\r\n          </Button>\r\n        </TooltipTrigger>\r\n        <TooltipContent\r\n          side=\"top\"\r\n          align=\"center\"\r\n          animationPreset=\"motion\"\r\n          transitionPreset=\"outQuad\"\r\n        >\r\n          <p className=\"text-sm\">Copy Essence</p>\r\n        </TooltipContent>\r\n      </Tooltip>\r\n\r\n      <Tooltip>\r\n        <TooltipTrigger asChild>\r\n          <Button variant=\"outline\" size=\"sm\">\r\n            Motion Blur Demo\r\n          </Button>\r\n        </TooltipTrigger>\r\n        <TooltipContent\r\n          side=\"top\"\r\n          align=\"center\"\r\n          animationPreset=\"motionBlur\"\r\n          transitionPreset=\"outQuad\"\r\n        >\r\n          <p className=\"text-sm\">Add to library</p>\r\n        </TooltipContent>\r\n      </Tooltip>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

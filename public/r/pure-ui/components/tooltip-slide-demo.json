@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-slide-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "tooltip-shadcn"
+  ],
+  "files": [
+    {
+      "path": "src/registry/pure-ui/components/shadcn/examples/tooltip/shadcn-tooltip-slide-demo.tsx",
+      "content": "\"use client\";\r\nimport { useState } from \"react\";\r\n\r\nimport {\r\n  Tooltip,\r\n  TooltipContent,\r\n  TooltipTrigger,\r\n} from \"@/registry/pure-ui/components/shadcn/ui/tooltip\";\r\nimport { Button } from \"@/registry/pure-ui/components/shadcn/ui/button\";\r\n\r\nexport function TooltipSlideDemo() {\r\n  const sides = [\"top\", \"right\", \"bottom\", \"left\"] as const;\r\n  const [side, setSide] = useState<(typeof sides)[number]>(\"top\");\r\n\r\n  return (\r\n    <div className=\"w-full h-full flex flex-col items-center justify-center gap-4\">\r\n      <Tooltip>\r\n        <TooltipTrigger asChild>\r\n          <Button variant=\"outline\" size=\"sm\">\r\n            Slide Outside Demo\r\n          </Button>\r\n        </TooltipTrigger>\r\n        <TooltipContent\r\n          animationPreset=\"slideOutside\"\r\n          transitionPreset=\"outQuad\"\r\n          side={side}\r\n        >\r\n          <p className=\"text-sm\">Copy Essence</p>\r\n        </TooltipContent>\r\n      </Tooltip>\r\n      <Tooltip>\r\n        <TooltipTrigger asChild>\r\n          <Button variant=\"outline\" size=\"sm\">\r\n            Slide Inside Demo\r\n          </Button>\r\n        </TooltipTrigger>\r\n        <TooltipContent\r\n          animationPreset=\"slideInside\"\r\n          transitionPreset=\"outQuad\"\r\n          side={side}\r\n        >\r\n          <p className=\"text-sm\">Copy Essence</p>\r\n        </TooltipContent>\r\n      </Tooltip>\r\n\r\n      <div className=\"absolute bottom-4 md:right-4 md:top-1/2 md:-translate-y-1/2 flex items-center gap-2\">\r\n        <label\r\n          htmlFor=\"side-select\"\r\n          className=\"text-xs font-medium text-foreground/70\"\r\n        >\r\n          Side\r\n        </label>\r\n        <select\r\n          id=\"side-select\"\r\n          value={side}\r\n          onChange={(e) => setSide(e.target.value as (typeof sides)[number])}\r\n          className=\"text-xs px-2 py-1 rounded-xs border border-(--border) bg-(--background) text-(--foreground) focus:outline-hidden focus:ring-1 focus:ring-(--ring)\"\r\n        >\r\n          {sides.map((preset) => (\r\n            <option key={preset} value={preset}>\r\n              {preset}\r\n            </option>\r\n          ))}\r\n        </select>\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

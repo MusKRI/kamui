@@ -22,7 +22,8 @@
       "@/*": ["./src/*"],
       "components/*": ["./src/core/components/*"],
       "config/*": ["./src/core/config/*"],
-      "icons/*": ["./src/core/icons/*"]
+      "icons/*": ["./src/core/icons/*"],
+      "hooks/*": ["./src/core/hooks/*"]
     }
   },
   "include": [

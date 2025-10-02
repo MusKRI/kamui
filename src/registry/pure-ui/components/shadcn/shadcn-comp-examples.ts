@@ -375,4 +375,61 @@ export const pureUIShadcnComponentExamples: RegistryItem[] = [
       },
     ],
   },
+
+  // Tooltip
+  {
+    name: "tooltip-demo",
+    type: "registry:example",
+    registryDependencies: ["tooltip-shadcn"],
+    files: [
+      {
+        path: "shadcn/examples/tooltip/shadcn-tooltip-demo.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "tooltip-motion-demo",
+    type: "registry:example",
+    registryDependencies: ["tooltip-shadcn"],
+    files: [
+      {
+        path: "shadcn/examples/tooltip/shadcn-tooltip-motion-demo.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "tooltip-wipe-demo",
+    type: "registry:example",
+    registryDependencies: ["tooltip-shadcn"],
+    files: [
+      {
+        path: "shadcn/examples/tooltip/shadcn-tooltip-wipe-demo.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "tooltip-slide-demo",
+    type: "registry:example",
+    registryDependencies: ["tooltip-shadcn"],
+    files: [
+      {
+        path: "shadcn/examples/tooltip/shadcn-tooltip-slide-demo.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "tooltip-scale-demo",
+    type: "registry:example",
+    registryDependencies: ["tooltip-shadcn"],
+    files: [
+      {
+        path: "shadcn/examples/tooltip/shadcn-tooltip-scale-demo.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
 ];

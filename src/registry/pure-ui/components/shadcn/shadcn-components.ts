@@ -117,4 +117,24 @@ export const pureUIShadcnComponents: RegistryItem[] = [
       "@radix-ui/react-switch",
     ],
   },
+  // Tooltip
+  {
+    name: "tooltip-shadcn",
+    type: "registry:ui",
+    title: "Tooltip",
+    description: "A customizable tooltip component",
+    files: [
+      {
+        path: "shadcn/ui/tooltip/index.tsx",
+        type: "registry:ui",
+      },
+    ],
+    dependencies: [
+      "class-variance-authority",
+      "clsx",
+      "tailwind-merge",
+      "@radix-ui/react-tooltip",
+      "motion",
+    ],
+  },
 ];

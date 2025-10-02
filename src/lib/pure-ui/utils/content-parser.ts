@@ -28,14 +28,16 @@ const matterEffect = (content: string) =>
     catch: (cause) => new FrontmatterParseError({ cause }),
   });
 
+export type Heading = {
+  id: string;
+  title: string;
+  level: number;
+};
+
 export interface ParsedContent {
   source: string;
   frontmatter: Record<string, any>;
-  headings: Array<{
-    id: string;
-    text: string;
-    level: number;
-  }>;
+  headings: Array<Heading>;
 }
 
 export const getContentByPath = (relativePath: string) =>
@@ -62,15 +64,15 @@ function extractHeadings(content: string) {
   const headingRegex = /^(#{1,6})\s+(.+)$/gm;
   const headings: Array<{
     id: string;
-    text: string;
+    title: string;
     level: number;
   }> = [];
 
   let match;
   while ((match = headingRegex.exec(content)) !== null) {
     const level = match[1].length;
-    const text = match[2].trim();
-    const id = text
+    const title = match[2].trim();
+    const id = title
       .replace(/ /g, "-")
       .replace(/'/g, "")
       .replace(/\?/g, "")
@@ -78,7 +80,7 @@ function extractHeadings(content: string) {
       .replace(/[^\w\-]/g, "")
       .toLowerCase();
 
-    headings.push({ id, text, level });
+    headings.push({ id, title, level });
   }
 
   return headings;

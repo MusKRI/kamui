@@ -121,6 +121,25 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "tooltip-shadcn": {
+    name: "tooltip-shadcn",
+    description: "A customizable tooltip component",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    dependencies: ["class-variance-authority","clsx","tailwind-merge","@radix-ui/react-tooltip","motion"],
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/ui/tooltip/index.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/ui/tooltip/index.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "badge-demo": {
     name: "badge-demo",
     description: "",
@@ -742,6 +761,101 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pure-ui/components/shadcn/examples/switch/shadcn-switch-icons-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "tooltip-demo": {
+    name: "tooltip-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["tooltip-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/tooltip/shadcn-tooltip-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/tooltip/shadcn-tooltip-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "tooltip-motion-demo": {
+    name: "tooltip-motion-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["tooltip-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/tooltip/shadcn-tooltip-motion-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/tooltip/shadcn-tooltip-motion-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "tooltip-wipe-demo": {
+    name: "tooltip-wipe-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["tooltip-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/tooltip/shadcn-tooltip-wipe-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/tooltip/shadcn-tooltip-wipe-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "tooltip-slide-demo": {
+    name: "tooltip-slide-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["tooltip-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/tooltip/shadcn-tooltip-slide-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/tooltip/shadcn-tooltip-slide-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "tooltip-scale-demo": {
+    name: "tooltip-scale-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["tooltip-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/tooltip/shadcn-tooltip-scale-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/tooltip/shadcn-tooltip-scale-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
