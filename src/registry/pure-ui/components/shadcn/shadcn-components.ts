@@ -78,6 +78,26 @@ export const pureUIShadcnComponents: RegistryItem[] = [
       "motion",
     ],
   },
+  // Dropdown Menu
+  {
+    name: "dropdown-menu-shadcn",
+    type: "registry:ui",
+    title: "Dropdown Menu",
+    description: "A customizable dropdown menu component",
+    files: [
+      {
+        path: "shadcn/ui/dropdown-menu/index.tsx",
+        type: "registry:ui",
+      },
+    ],
+    dependencies: [
+      "class-variance-authority",
+      "clsx",
+      "tailwind-merge",
+      "@radix-ui/react-dropdown-menu",
+      "motion",
+    ],
+  },
   // Input OTP
   {
     name: "input-otp-shadcn",

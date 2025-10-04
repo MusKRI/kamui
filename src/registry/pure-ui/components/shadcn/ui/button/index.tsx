@@ -102,7 +102,7 @@ function Button({
             className={cn("size-4.5", !reduceMotion && "animate-spin")}
           />
         </span>
-        <span className={cn("flex items-center", contentTransition)}>
+        <span className={cn("flex items-center", contentTransition, className)}>
           <Slottable>{children}</Slottable>
         </span>
       </span>

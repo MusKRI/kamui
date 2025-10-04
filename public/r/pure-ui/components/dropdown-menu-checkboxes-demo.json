@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-checkboxes-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "dropdown-menu-shadcn"
+  ],
+  "files": [
+    {
+      "path": "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-checkboxes-demo.tsx",
+      "content": "\"use client\";\r\n\r\nimport { useState } from \"react\";\r\n\r\nimport { Button } from \"@/registry/pure-ui/components/shadcn/ui/button\";\r\nimport {\r\n  DropdownMenu,\r\n  DropdownMenuCheckboxItem,\r\n  DropdownMenuContent,\r\n  DropdownMenuGroup,\r\n  DropdownMenuItem,\r\n  DropdownMenuLabel,\r\n  DropdownMenuSeparator,\r\n  DropdownMenuSub,\r\n  DropdownMenuSubContent,\r\n  DropdownMenuSubTrigger,\r\n  DropdownMenuTrigger,\r\n} from \"@/registry/pure-ui/components/shadcn/ui/dropdown-menu\";\r\n\r\nexport function DropdownMenuCheckboxesUsage() {\r\n  const [open, setOpen] = useState(false);\r\n  const [showStatusBar, setShowStatusBar] = useState(true);\r\n  const [showPanel, setShowPanel] = useState(false);\r\n\r\n  return (\r\n    <DropdownMenu open={open} onOpenChange={setOpen}>\r\n      <DropdownMenuTrigger asChild>\r\n        <Button variant=\"outline\">Open</Button>\r\n      </DropdownMenuTrigger>\r\n      <DropdownMenuContent className=\"w-56\" align=\"center\">\r\n        <DropdownMenuLabel>My Account</DropdownMenuLabel>\r\n        <DropdownMenuGroup>\r\n          <DropdownMenuItem onSelect={(event) => event.preventDefault()}>\r\n            Profile\r\n          </DropdownMenuItem>\r\n        </DropdownMenuGroup>\r\n        <DropdownMenuSeparator />\r\n        <DropdownMenuSub>\r\n          <DropdownMenuSubTrigger>Appearance</DropdownMenuSubTrigger>\r\n          <DropdownMenuSubContent>\r\n            <DropdownMenuCheckboxItem\r\n              checked={showStatusBar}\r\n              onCheckedChange={(checked) => setShowStatusBar(checked)}\r\n              onSelect={(event) => event.preventDefault()}\r\n            >\r\n              Status Bar\r\n            </DropdownMenuCheckboxItem>\r\n            <DropdownMenuCheckboxItem\r\n              checked={showPanel}\r\n              onCheckedChange={(checked) => setShowPanel(checked)}\r\n              onSelect={(event) => event.preventDefault()}\r\n            >\r\n              Panel\r\n            </DropdownMenuCheckboxItem>\r\n          </DropdownMenuSubContent>\r\n        </DropdownMenuSub>\r\n      </DropdownMenuContent>\r\n    </DropdownMenu>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

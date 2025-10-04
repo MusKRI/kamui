@@ -56,11 +56,11 @@ const pureUIComponents = [
         title: "Dialog",
         href: "/pure-ui/components/shadcn/dialog",
       },
-      // {
-      //   id: "dropdown-menu",
-      //   title: "Dropdown Menu",
-      //   href: "/pure-ui/components/shadcn/dropdown-menu",
-      // },
+      {
+        id: "dropdown-menu",
+        title: "Dropdown Menu",
+        href: "/pure-ui/components/shadcn/dropdown-menu",
+      },
       // {
       //   id: "input",
       //   title: "Input",

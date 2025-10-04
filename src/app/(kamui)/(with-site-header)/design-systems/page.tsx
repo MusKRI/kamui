@@ -1,7 +1,12 @@
-import { EdibleUILogo } from "components/logos/edible-ui";
+import { Metadata } from "next";
+
 import { PureUILogo } from "components/logos/pure-ui";
-import { Netflix } from "components/logos/companies-logo";
 import { DesignSystemCard } from "components/composed/design-systems-page";
+
+export const metadata: Metadata = {
+  title: "Design Systems",
+  description: "Explore Hand Crafted & Already Known Design Systems",
+};
 
 export default function DesignSystemsPage() {
   return (

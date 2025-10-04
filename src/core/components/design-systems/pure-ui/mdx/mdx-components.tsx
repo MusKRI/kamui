@@ -120,6 +120,18 @@ export const mdxComponents: MDXComponents = {
   li: ({ className, ...props }: React.ComponentProps<"li">) => (
     <li className={cn("PureLI leading-[2]", className)} {...props} />
   ),
+  MultiColumnListWrapper: ({
+    className,
+    ...props
+  }: React.ComponentProps<"div">) => (
+    <div
+      className={cn(
+        "PureUIMultiColumnListWrapper *:[ul]:columns-2 md:*:[ul]:columns-3 *:[ul]:my-4 *:[ul]:p-0 *:[ul]:gap-8 **:[li]:my-1",
+        className
+      )}
+      {...props}
+    />
+  ),
 
   // Code blocks
   pre: CodeBlock,

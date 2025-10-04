@@ -76,6 +76,25 @@
       ]
     },
     {
+      "name": "dropdown-menu-shadcn",
+      "type": "registry:ui",
+      "title": "Dropdown Menu",
+      "description": "A customizable dropdown menu component",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge",
+        "@radix-ui/react-dropdown-menu",
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/ui/dropdown-menu/index.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "input-otp-shadcn",
       "type": "registry:ui",
       "title": "Input OTP",
@@ -374,6 +393,136 @@
       "files": [
         {
           "path": "src/registry/pure-ui/components/shadcn/examples/dialog/shadcn-dialog-wipes-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dropdown-menu-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-basic-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dropdown-menu-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-basic-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-checkboxes-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dropdown-menu-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-checkboxes-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-radio-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dropdown-menu-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-radio-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-radio-custom-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dropdown-menu-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-radio-custom-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-wipe-animation-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dropdown-menu-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dm-wipe-animation-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-wipe-scale-animation-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dropdown-menu-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dm-wipe-scale-animation-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-motion-animation-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dropdown-menu-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dm-motion-animation-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-motion-blur-animation-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dropdown-menu-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dm-motion-blur-animation-demo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-item-motion-animation-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "dropdown-menu-shadcn"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dm-item-motion-demo.tsx",
           "type": "registry:component"
         }
       ]

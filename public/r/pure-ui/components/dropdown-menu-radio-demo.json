@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-radio-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "dropdown-menu-shadcn"
+  ],
+  "files": [
+    {
+      "path": "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-radio-demo.tsx",
+      "content": "\"use client\";\r\n\r\nimport { useState } from \"react\";\r\n\r\nimport { Button } from \"@/registry/pure-ui/components/shadcn/ui/button\";\r\nimport {\r\n  DropdownMenu,\r\n  DropdownMenuContent,\r\n  DropdownMenuGroup,\r\n  DropdownMenuItem,\r\n  DropdownMenuLabel,\r\n  DropdownMenuRadioGroup,\r\n  DropdownMenuRadioItem,\r\n  DropdownMenuSeparator,\r\n  DropdownMenuTrigger,\r\n} from \"@/registry/pure-ui/components/shadcn/ui/dropdown-menu\";\r\n\r\nexport function DropdownMenuRadioGroupUsage() {\r\n  const [open, setOpen] = useState(false);\r\n  const [position, setPosition] = useState(\"top\");\r\n\r\n  return (\r\n    <DropdownMenu open={open} onOpenChange={setOpen}>\r\n      <DropdownMenuTrigger asChild>\r\n        <Button variant=\"outline\">Open</Button>\r\n      </DropdownMenuTrigger>\r\n      <DropdownMenuContent className=\"w-56\" align=\"center\">\r\n        <DropdownMenuLabel>My Account</DropdownMenuLabel>\r\n        <DropdownMenuGroup>\r\n          <DropdownMenuItem onSelect={(event) => event.preventDefault()}>\r\n            Profile\r\n          </DropdownMenuItem>\r\n        </DropdownMenuGroup>\r\n        <DropdownMenuSeparator />\r\n        <DropdownMenuLabel>Teams</DropdownMenuLabel>\r\n        <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>\r\n          <DropdownMenuRadioItem\r\n            value=\"top\"\r\n            onSelect={(event) => event.preventDefault()}\r\n          >\r\n            Top\r\n          </DropdownMenuRadioItem>\r\n          <DropdownMenuRadioItem\r\n            value=\"bottom\"\r\n            onSelect={(event) => event.preventDefault()}\r\n          >\r\n            Bottom\r\n          </DropdownMenuRadioItem>\r\n          <DropdownMenuRadioItem\r\n            value=\"right\"\r\n            onSelect={(event) => event.preventDefault()}\r\n          >\r\n            Right\r\n          </DropdownMenuRadioItem>\r\n        </DropdownMenuRadioGroup>\r\n      </DropdownMenuContent>\r\n    </DropdownMenu>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

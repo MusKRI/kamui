@@ -1,25 +1,19 @@
 "use client";
 
 import { motion } from "motion/react";
+
+import { useMediaQuery } from "hooks/use-media-query";
 import { useSidebar } from "./sidebar/use-sidebar";
 import { PureUISidebar } from "./sidebar";
-import { useMediaQuery } from "@/core/hooks/use-media-query";
-import { useEffect } from "react";
 
 export function PureUILayoutWrapper({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { isOpen, close } = useSidebar();
+  const { isOpen } = useSidebar();
 
-  const isMobile = useMediaQuery("(max-width: 768px)");
-
-  // useEffect(() => {
-  //   if (isMobile) {
-  //     close();
-  //   }
-  // }, [isMobile]);
+  const isMobile = useMediaQuery("(max-width: 1024px)");
 
   return (
     <div className="h-full flex-1 flex flex-row mt-16">

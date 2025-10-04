@@ -11,9 +11,14 @@ import { getSavedExpandedState, saveExpandedState } from "./sidebar-utils";
 type SidebarSectionProps = {
   section: SidebarSection;
   pathname: string;
+  handleClosingSidebar: () => void;
 };
 
-export function SidebarSection({ section, pathname }: SidebarSectionProps) {
+export function SidebarSection({
+  section,
+  pathname,
+  handleClosingSidebar,
+}: SidebarSectionProps) {
   const [isExpanded, setIsExpanded] = useState(() => {
     const savedState = getSavedExpandedState();
     const savedExpanded = savedState[section.id];
@@ -68,7 +73,7 @@ export function SidebarSection({ section, pathname }: SidebarSectionProps) {
           <motion.div
             animate={{ rotate: isExpanded ? 0 : -90 }}
             transition={{ duration: 0.2 }}
-            className="group-hover:opacity-100 opacity-0"
+            // className="group-hover:opacity-100 opacity-0"
           >
             <ChevronDownIcon className="w-4 h-4" />
           </motion.div>
@@ -126,7 +131,11 @@ export function SidebarSection({ section, pathname }: SidebarSectionProps) {
                     style={{ willChange: "transform" }}
                   >
                     {item.href && !item.disabled ? (
-                      <Link href={item.href as any} className="block">
+                      <Link
+                        href={item.href as any}
+                        className="block"
+                        onClick={handleClosingSidebar}
+                      >
                         {ItemContent}
                       </Link>
                     ) : (

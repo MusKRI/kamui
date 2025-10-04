@@ -1,0 +1,150 @@
+---
+title: Dropdown Menu
+description: A dropdown menu is a menu that appears when the user clicks on a button.
+provider: shadcn
+features:
+  - "Built on Radix UI primitives"
+  - "Multiple animation presets"
+  - "Custom animation and transition support"
+  - "Item-level animations with staggered effects"
+  - "Radio groups with animated selection indicators"
+  - "Checkbox items with built-in states"
+  - "Sub-menu support with nested navigation"
+  - "Reduce motion compliance"
+  - "Full keyboard navigation"
+  - "Controlled and uncontrolled modes"
+---
+
+<ComponentShowcase name="dropdown-menu-demo" />
+
+## Installation
+
+<Tabs defaultValue="terminal">
+  <TabsList>
+    <TabsTrigger value="terminal">
+      <Terminal className="w-4 h-4" />
+      Terminal
+    </TabsTrigger>
+    <TabsTrigger value="manual">
+      <Code2 className="w-4 h-4" />
+      Manual
+    </TabsTrigger>
+  </TabsList>
+  <TabsContent value="terminal">
+    <InstallationCommands
+      type="registry-installation"
+      registryPath="pure-ui/components/dropdown-menu-shadcn"
+    />
+  </TabsContent>
+  <TabsContent value="manual">
+    <Steps currentStep={1}>
+      <Step stepNumber={1} title="Install dependencies">
+        <InstallationCommands
+          type="package-installation"
+          npmCommand="npm install @radix-ui/react-dropdown-menu motion class-variance-authority clsx"
+          pnpmCommand="pnpm add @radix-ui/react-dropdown-menu motion class-variance-authority clsx"
+          yarnCommand="yarn add @radix-ui/react-dropdown-menu motion class-variance-authority clsx"
+          bunCommand="bun add @radix-ui/react-dropdown-menu motion class-variance-authority clsx"
+        />
+      </Step>
+      <Step
+        stepNumber={2}
+        title="Add cn function to your utils"
+      >
+        ```ts
+        import { clsx, type ClassValue } from "clsx";
+        import { twMerge } from "tailwind-merge";
+
+        export function cn(...inputs: ClassValue[]) {
+          return twMerge(clsx(inputs));
+        }
+        ```
+      </Step>
+      <Step
+        stepNumber={3}
+        title="Copy and paste the following code into your project"
+        isLast
+      >
+        <ComponentCodePreview name="dropdown-menu-shadcn" />
+      </Step>
+    </Steps>
+
+  </TabsContent>
+</Tabs>
+
+## Anatomy
+
+```tsx
+<DropdownMenu>
+  <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem>Profile</DropdownMenuItem>
+    <DropdownMenuItem>Billing</DropdownMenuItem>
+    <DropdownMenuItem>Team</DropdownMenuItem>
+    <DropdownMenuItem>Subscription</DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+```
+
+## Usage
+
+### Basic
+
+<ComponentShowcase name="dropdown-menu-basic-demo" />
+
+### Checkboxes
+
+<ComponentShowcase name="dropdown-menu-checkboxes-demo" />
+
+Here `onSelect={(event) => event.preventDefault()}` is used to prevent the default behavior of the dropdown menu so that you can clearly see the checkbox items being checked or unchecked properly.
+
+### Radio Group
+
+<ComponentShowcase name="dropdown-menu-radio-demo" />
+
+You can use custom active icon for the radio group by passing the `activeIcon` prop to the `DropdownMenuRadioGroup` component. See the example below.
+
+<ComponentShowcase name="dropdown-menu-radio-custom-demo" />
+
+## Content Animation
+
+You can use one of the pre-defined animation preset to animate the `DropdownMenuContent` component.
+
+```tsx
+<DropdownMenuContent animationPreset="preset-name">
+```
+
+### Wipe
+
+<ComponentShowcase name="dropdown-menu-wipe-animation-demo" />
+
+### Wipe Scale
+
+<ComponentShowcase name="dropdown-menu-wipe-scale-animation-demo" />
+
+### Motion
+
+<ComponentShowcase name="dropdown-menu-motion-animation-demo" />
+
+### Motion Blur
+
+<ComponentShowcase name="dropdown-menu-motion-blur-animation-demo" />
+
+## Animation Presets
+
+You can choose animation preset for `DropdownMenuContent` component from this list:
+
+<MultiColumnListWrapper>
+
+- `none`
+- `scale`
+- `wipe`
+- `wipeScale`
+- `motion`
+- `motionBlur`
+- `slideOutside`
+- `slideInside`
+
+</MultiColumnListWrapper>

@@ -83,6 +83,25 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "dropdown-menu-shadcn": {
+    name: "dropdown-menu-shadcn",
+    description: "A customizable dropdown menu component",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    dependencies: ["class-variance-authority","clsx","tailwind-merge","@radix-ui/react-dropdown-menu","motion"],
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/ui/dropdown-menu/index.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/ui/dropdown-menu/index.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "input-otp-shadcn": {
     name: "input-otp-shadcn",
     description: "A customizable input OTP component",
@@ -495,6 +514,196 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/pure-ui/components/shadcn/examples/dialog/shadcn-dialog-wipes-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "dropdown-menu-demo": {
+    name: "dropdown-menu-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["dropdown-menu-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "dropdown-menu-basic-demo": {
+    name: "dropdown-menu-basic-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["dropdown-menu-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-basic-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-basic-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "dropdown-menu-checkboxes-demo": {
+    name: "dropdown-menu-checkboxes-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["dropdown-menu-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-checkboxes-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-checkboxes-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "dropdown-menu-radio-demo": {
+    name: "dropdown-menu-radio-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["dropdown-menu-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-radio-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-radio-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "dropdown-menu-radio-custom-demo": {
+    name: "dropdown-menu-radio-custom-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["dropdown-menu-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-radio-custom-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dropdown-menu-radio-custom-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "dropdown-menu-wipe-animation-demo": {
+    name: "dropdown-menu-wipe-animation-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["dropdown-menu-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dm-wipe-animation-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dm-wipe-animation-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "dropdown-menu-wipe-scale-animation-demo": {
+    name: "dropdown-menu-wipe-scale-animation-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["dropdown-menu-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dm-wipe-scale-animation-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dm-wipe-scale-animation-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "dropdown-menu-motion-animation-demo": {
+    name: "dropdown-menu-motion-animation-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["dropdown-menu-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dm-motion-animation-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dm-motion-animation-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "dropdown-menu-motion-blur-animation-demo": {
+    name: "dropdown-menu-motion-blur-animation-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["dropdown-menu-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dm-motion-blur-animation-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dm-motion-blur-animation-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "dropdown-menu-item-motion-animation-demo": {
+    name: "dropdown-menu-item-motion-animation-demo",
+    description: "",
+    type: "registry:example",
+    registryDependencies: ["dropdown-menu-shadcn"],
+    dependencies: undefined,
+    files: [{
+      path: "src/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dm-item-motion-demo.tsx",
+      type: "registry:component",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/pure-ui/components/shadcn/examples/dropdown-menu/shadcn-dm-item-motion-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
